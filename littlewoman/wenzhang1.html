@@ -1,0 +1,750 @@
+
+
+
+ 
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>小妇人商城</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content='小妇人商城是致力于O2O最实用模式的专业商城，PC端商城和移动端微商城一体化运营.' />
+<meta name="keywords" content='小妇人商城,潮流女包,绅士男包,聚金钱包,时尚箱包,精品皮带,皮革护理用品,时尚皮具,广州皮具,oto商城,企业商城,微商城' />
+<link rel="stylesheet" href="http://www.91xfr.com:80/front/css/main.css">
+<script type="text/javascript" src="bootstrap/js/jquery-1.7.2.min.js" ></script>
+
+</head>
+<body>
+	
+
+
+
+
+<link rel="stylesheet" href="http://www.91xfr.com:80/css/base.css">
+<link rel="stylesheet" href="http://www.91xfr.com:80/front/css/common.css">
+<link rel="stylesheet" type="text/css" href="http://www.91xfr.com:80/css/dialog.css">
+<!--PC端模板样式添加处 -->
+ <link rel="stylesheet" href="http://www.91xfr.com:80/templet/littleWomen/css/colorStyle.css">
+ <link rel="stylesheet" href="css/style1.css" />
+<script type="text/javascript" src="http://www.91xfr.com:80/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://www.91xfr.com:80/js/jqueryui.js"></script>
+<script type="text/javascript" src="http://www.91xfr.com:80/js/simpleui.min.js"></script>
+<script type="text/javascript" src="http://www.91xfr.com:80/js/bootstrap.js"></script>
+<script type="text/javascript" src="http://www.91xfr.com:80/js/required.js"></script>
+<div class="head clearfix">
+   <input type="hidden" value="null" id="idcard"/>
+   <input type="hidden" value="http://www.91xfr.com:80/" id="path"/>
+   <div class="head-inner">
+   <!--
+ 
+   	时间：2015-07-20
+   	描述：
+	<a class="logo" href="http://www.91xfr.com:80/"><img src="http://www.91xfr.com:80/templet/littleWomen/img/logo.png" alt="小妇人商城"/></a>
+	   -->
+   	<div class="head-tool">
+			    <ul>
+			    	
+				<li><span>您好，欢迎来到小妇人商城</span></li>
+				<li>
+			    <span id="vip_name" class="vip-name" ></span>
+			    <a class="vip-order" style="display: none;">我的订单</a>
+			    <a class="vip-order" style="display: none;position:relative">购物车
+			    <i class="redDot"></i>
+			    </a>
+			    </li>
+				
+
+		       <li><a href="http://www.91xfr.com:80/login_vip.jsp">请登录</a></li>
+		       <li><a href="http://www.91xfr.com:80/login_vip.jsp?type=register">免费注册</a></li> 
+				
+				<li class="spe">
+					<a href="">
+					<span><img src="img/sml-pho.png"/></span>
+					手机版	
+					</a>
+					<div class="head-pho" ><img src="img/phone.jpg" ></div>
+					
+
+				</li>
+				
+				
+				<li>
+			    <a  href="http://www.tleshop.com/front/classification.jsp" target="_blank">
+			    	<span style="color: #D50000;">？</span>
+			    	软件订购</a>
+			    	</li>
+				
+				</ul>
+		</div>
+   </div>
+	
+	
+</div>
+<script>
+	$(function(){
+		var $div_li=$(".spe");
+		$div_li.hover(function(){
+			$(this).children(".head-pho").show();
+		},function(){
+			$(this).children(".head-pho").hide();
+		});
+		
+	})
+</script>
+
+
+<script type="text/javascript" src="http://www.91xfr.com:80/js/jquery.blockUI.js"></script>
+	<img id="blockUiLoding" class="hide" src="http://www.91xfr.com:80/front/img/loading38.gif"/>
+	<script type="text/javascript">
+	 function shade(){
+		 $("body").block({ 
+	                message:$("#blockUiLoding"), 
+	                css: { border: 'none'} 
+	            }); 
+
+		 setTimeout(removeShade, 30000); 
+		} ;
+
+	function removeShade(){
+		$('body').unblock(); 
+	};
+</script>
+<script type="text/javascript" src="http://www.91xfr.com:80//front/js/login.js"></script>
+<script type="text/javascript" src="http://www.91xfr.com:80/front/js/menu.js"></script>
+<script type="text/javascript" src="http://www.91xfr.com:80/js/jquery.cookie.js"></script>
+	<link rel="stylesheet" href="http://www.91xfr.com:80/front/css/website.css">
+	
+
+
+
+
+
+
+
+<head><link rel="stylesheet" href="http://www.91xfr.com:80/css/common.css"><link rel="stylesheet" href="http://www.91xfr.com:80/plugins/iconfont/iconfont.css"></head>
+<input type="hidden" id="basePath" value="http://www.91xfr.com:80/" />
+<div class="topAbout">
+	<div class="nav2">
+		<div class="logo left">
+			<div class="left">
+				<a href="http://www.91xfr.com:80/">
+					<img alt="logo" src="img/logo.png" href="http://www.91xfr.com:80/" >
+									</a>
+			</div>
+		</div>
+		<div class="search left">
+			<form>
+				<div class="search_input">
+					<input type="text" value="查询:商品名称" name="keyword"
+						   id="keywordsValue" class="searchBoxTwo left"> <input
+						type="button" id="searchGood" class="searchTijiao left" value="搜索">
+				</div>
+			</form>
+			<div class="hotTab left">
+				
+				
+					<a class="odd"
+							href='http://www.91xfr.com:80/front/classification.jsp?keywordsend=内衣'>内衣</a>
+							<a
+							href='http://www.91xfr.com:80/front/classification.jsp?keywordsend=内衣'>文胸</a>
+				
+					<a  class="odd"
+							href='http://www.91xfr.com:80/front/classification.jsp?keywordsend=岸芷汀兰'>岸芷汀兰</a>
+				
+			</div>
+		</div>
+		<div class="new right">
+			<div class="new-box">
+				<p>手机商城</p>
+				<div class="new-img">
+					<img src="img/conserned.jpg">
+				</div>
+				<div class="new-btn"><input class="btn-new" type="button" value="X"></div>
+			</div>
+			
+		</div>
+		<script>
+			$(function(){
+				$(".btn-new").click(function(){
+					$(this).parents(".new-box").hide();
+				})
+			})
+		</script>
+		<!--使用字幕滚动，同时要注释下面font-head那一段div
+                 <div id="scrollingBox">
+                      <div id="scrolling1">
+                        <a href="#">0先生 广东 广州 TN高雅系列 TN3 ￥23000</a><br />
+                        <a href="#">1先生 广东 东莞 YH银河系列 UP120YH ￥20000</a><br />
+                        <a href="#">2先生 广东 清远 精英系列 JY120A ￥19000</a><br />
+                        <a href="#">3先生 广东 广州 TN高雅系列 TN3 ￥23000</a><br />
+                        <a href="#">4先生 广东 东莞 YH银河系列 UP120YH ￥20000</a><br />
+                    </div>
+                    <div id="scrolling2"></div>
+                </div>   -->
+                <!--
+                	
+                	时间：2015-07-20
+                	描述：
+              
+		<div class="zhengpin left">
+			<div class="font-head"><h1><i class="icon iconfont">&#xe72c;</i>&nbsp;正品保障</h1>
+				<h1 id="shouHou"><i class="icon iconfont">&#xe61a;</i>&nbsp;售后无忧</h1>
+			</div>
+			<div class="weixing"><img  src="http://www.91xfr.com:80/templet/littleWomen/img/phone.jpg" width="65">
+				<p>手机商城</p>
+
+			</div>
+			<div class="weixing1"><img  src="http://www.91xfr.com:80/templet/littleWomen/img/conserned.jpg" width="65">
+				<p>关注我们</p>
+
+			</div>
+		</div>
+		-->
+	</div>
+</div>
+<!--LOGO页头行   结束 -->
+<!--功能菜单行   开始-->
+<div class="nav_menu">
+	<div class="goodsMenu">
+		<div style="cursor:pointer; width: 200px;"  onclick="window.open('http://www.91xfr.com:80/front/classification.jsp?styleType=styleOne','_self')" class="goodsname left">
+			<strong>全部商品分类</strong>
+		</div>
+		<div class="channel">
+			<ul>
+				<li><a href="http://www.91xfr.com:80/"
+					   class="a_channel_hover" id="high">首页</a></li>
+				<li class=''><a href='http://www.91xfr.com:80/front/classification.jsp?categoryId=f89bb1cd4e3f2eb1014e42467f1e0020&hover=f89bb1cd4e3f2eb1014e42467f1e0020&styleType=styleOne'>文胸</a></li><li class=''><a href='http://www.91xfr.com:80/front/classification.jsp?categoryId=f89bb1cd4e3f2eb1014e4248121c0022&hover=f89bb1cd4e3f2eb1014e4248121c0022&styleType=styleOne'>内裤</a></li><li class=''><a href='http://www.91xfr.com:80/front/classification.jsp?categoryId=f89bb1cd4e3f2eb1014e42491b4c0024&hover=f89bb1cd4e3f2eb1014e42491b4c0024&styleType=styleOne'>家居服</a></li><li class=''><a href='http://www.91xfr.com:80/front/classification.jsp?categoryId=f89bb1cd4e3f2eb1014e424954a90025&hover=f89bb1cd4e3f2eb1014e424954a90025&styleType=styleOne'>泳衣</a></li>
+				
+				 
+			</ul>
+		</div>
+		<!--
+        	作者：730377349@qq.com
+        	时间：2015-07-20
+        	描述：
+    
+		<div class="goodsguang right">
+			<a title="软件订购" href="http://www.tleshop.com/front/classification.jsp" target="_blank">软件订购</a>
+		</div>
+		    -->
+	</div>
+</div>
+<!--LOGO页头行   结束 -->
+<!--功能菜单行   开始-->
+<!--
+	作者：730377349@qq.com
+	时间：2015-07-22
+	描述：
+
+<div class="nav_menu">
+	<div class="goodsMenu">
+		<div style="cursor:pointer" onclick="window.open('http://www.91xfr.com:80/front/classification.jsp','_self')" class="goodsname left">
+			<strong>全部商品分类</strong>
+		</div>
+		<div class="channel">
+			<ul>
+				<li><a href="http://www.91xfr.com:80/"
+					   class="null">首页</a></li>
+				<li><a class="null"
+					   href="http://www.91xfr.com:80/front/classification.jsp?orderType=newGood&newGood=a_channel_hover">新品</a>
+				</li>
+				<li><a class="null"
+					   href="http://www.91xfr.com:80/front/classification.jsp?orderType=price&price=a_channel_hover">定制</a>
+				</li>
+				<li><a class="null"
+					   href="http://www.91xfr.com:80/front/classification.jsp?orderType=specialPrice&specialPrice=a_channel_hover">特价</a>
+				</li>
+				<li><a class=""
+					   href="http://www.91xfr.com:80/footorArticle.action?introduct=a_channel_hover&article.id=4028138149dbd4e40149dbf803810014">品牌推荐</a>
+				</li>
+				<li><a class=""
+					   href="http://www.91xfr.com:80/shopShow.action?showShop=a_channel_hover">门店展示</a>
+				</li>
+				<li><a
+						href="http://www.91xfr.com:80/newsCenter.action">行业交流</a>
+				</li>
+				
+			</ul>
+		</div>
+		<div class="goodsguang right">
+			<a title="官方网站" href="http://www.tleshop.com/front/classification.jsp" target="_blank">软件订购</a>
+		</div>
+	</div>
+</div>
+-->
+<script type="text/javascript">
+	inputTip($("#keywordsValue"), "查询:商品名称,商家名称");
+	if ("" == $("#keywords").val()) {
+		$("#keywordsValue").val("查询:商品名称,商家名称");
+	} else {
+		$("#keywordsValue").val($("#keywords").val());
+	};
+	$("#searchGood").live(
+			'click',
+			function() {
+				var keywords = $("#keywordsValue").val();
+				window.location.href = $('#basePath').val()
+				+ "front/classification.jsp?keywordsend=" + keywords;
+			});
+	/* 实现字幕无缝滚动  */
+	/*         var speed=80;
+	 var demo =document.getElementById("scrollingBox");
+	 var demo1 =document.getElementById("scrolling1");
+	 var demo2 =document.getElementById("scrolling2");
+	 demo2.innerHTML=demo1.innerHTML;   //克隆demo1为demo2
+	 function Marquee(){
+	 if(demo2.offsetTop-demo.scrollTop<=0){   //当滚动至demo1与demo2交界时
+	 demo.scrollTop-=demo1.offsetHeight; //demo跳到最顶端
+	 }
+	 else{
+	 demo.scrollTop++;
+	 }
+	 }
+	 var MyMar=setInterval(Marquee,speed);   //设置定时器
+	 demo.onmouseover=function(){clearInterval(MyMar);};//鼠标移上时清除定时器达到滚动停止的目的
+	 demo.onmouseout=function(){MyMar=setInterval(Marquee,speed);};//鼠标移开时重设定时器   */
+
+</script>
+
+	<div class="articleBox">
+		<div class="articleTitle">
+		<div class="articleHead">
+			<p class="head-title">商品验货与签收</p>
+			<p class="head-time">
+				2014-11-27
+			</p>
+			<p class="head-img"><img src="img/people.png"></p>
+		</div>
+			
+		</div>
+		<div class="articleContent">
+			
+		<p class="txt-fisrt">
+	<span>为了维护和保障您的权益，保证您在我商城愉快的购物体验，请您仔细阅读以下有关验货与签收的相关说明，感谢您的支持和配合。</span>
+</p>
+<div class="txt-box">
+<h3 ><span class="zho">验货：</span></h3>
+<p><span>(1)包裹外包装是否有明显挤压、变形、破损或受潮状况 ；</span></p>
+<p><span>(2)包裹外包装上印‘小妇人内衣’标志（Logo）的封箱胶带是否完好，是否有被拆封或二次封箱痕迹；</span></p>
+<p><span>(3)包裹快递面单上标明的收件人地址、姓名、联系方式是否与您提供的信息一致；</span></p>
+<p><span >(4)检查商品外观是否完好无损</span><span >，配件是否缺失；</span></p>
+<p><span>(5)如您在检查后发现有任何异常，请您向配送工作人员指出并当场拒绝签收整个包裹，并立即登陆‘小妇人商城’www.91xfr.com 申请退货、换货，或者拨“小妇人商城”客服热线(020-86243766) ，客服将会根据您反映的实际状况及时为您处理。</span></p>
+<p><span style="color: rgb(255, 0, 0);">注：快递员离开后，就表示同意内衣没有质量问题。若签收后再反映所购产品有严重破损等此类问题，小妇人商城拒绝受理。</span></p>
+</div>
+<div class="txt-box">
+<h3 ><span class="zho">签收：</span></h3>
+<p><span>(1)原则上请你务必保证收件本人亲自签收，并提供本人身份证（或其他有效证件）以供送货人员核对查验；</span></p>
+<p><span >(2)</span><span >授权代签同等于本人签收；</span></p>
+<p><span>(3)特殊情况如非收件本人签收，需核实实际签收人是否已被授权（不限于提供授权委托证明材料、收件人身份证明复印件）；如为临时代签，则由送货人员当场与收件本人电话确认授权代签人信息（不限于提供授权委托证明材料、收件人身份证明复印件）；</span></p>
+<p><span>(4)请您配合协助快递行业按标准要求工整清晰签署，并保留收件人留存联以备日后查验。</span></p>
+</div>
+<div class="txt-box">
+<h3 ><span class="zho">温馨提示：</span></h3>
+<p><span>(1)请您一定要小心开启您的包裹，以免尖锐物品损伤到包裹内的商品；</span></p>
+<p><span>(2)签收时请务必保证在送货人员在场的情况下拆开包裹，仔细核对发货清单注明的商品型号、数量、发票（如有）、三包凭证（如有）等内容；若包裹内商
+品的型号、数量或外观等存在明显异常（例如商品错误、数量短少、变形、损坏、刮花等情况），请务必要求送货人员签字确认并立即登录‘小妇人商城’网站
+http://www.91xfr.com/申请退货、换货，或者拨打“小妇人商城”客服热线(</span><span> </span>
+	<span>020-86243766</span><span>)，客服将会根据您反映的实际状况及时为您处理。</span></p>
+<p><span>(3)如您在送货人员离开后再提出包裹外包装或封箱胶带异常情况，以及商品的型号、数量或外观等存在异常而要求退换货，“小妇人商城”将全力协助您处理，因无法确认责任，所以无法保证一定能够达到您百分比的满意，敬请谅解；</span></p>
+<p><span>(4)如送货人员以“时间来不及”或“公司没有规定”等借口不配合您进行验货和签字确认，请立即联系‘小妇人商城’客服进行投诉，‘小妇人商城’客服将会在第一时间为您处理；同时为了维护您的权益，建议您先不要拆开包裹。</span></p>
+<p><span>(5)为了保护您的权益，建议您尽量不要委托他人代为签收；如由他人代为签收商品而没有在送货人员现场的情况下验货，则视为您所订购商品的包装无任何问题；</span></p>
+<p><span>(6)建议您保留商品外包装至少15天，以便如您发现商品有质量问题时能及时有效的为您处理；</span></p>
+<p ><span>在签收商品的过程中，如对我商城委派的快递公司送货人员服务不满，以及任何异常情况，请拨打客服热线 </span><span>020-86243766</span><span>，我们将会有专门的客服竭诚为您服务！</span></p>
+</div>
+<p>
+	<br/>
+</p>
+			<!-- 文章内容 -->
+
+		</div>
+		
+	</div>
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+<div class="footer-infor left">
+<!--
+	作者：730377349@qq.com
+	时间：2015-07-21
+	描述：
+
+	<div  class="friLink">
+
+   
+    	作者：730377349@qq.com
+    	时间：2015-07-15
+    	描述：
+    <div class="corper">
+     
+     <div class="corpera"><span class="corperaTitle" ><a href="#" ><img src="http://www.91xfr.com:80/front/img/corperation.png" style="width:130px;heigth:100px;" ></a></span> </div>
+	    
+	    
+	       	
+	       		<span><a href="http://www.tleshop.com" title="广州庭燎信息科技有限公司" target="_blank" ><img src="http://www.91xfr.com:80//img/tleshop-logo.jpg" style="width:130px;heigth:40px;" ></a></span>
+	       
+	       		<span><a href="http://www.budifo.com/" title="小妇人官网" target="_blank" ><img src="http://www.91xfr.com:80//uploadFile/advertisement/b4d9dc59-360e-430a-8c3a-dd161939282e.png" style="width:130px;heigth:40px;" ></a></span>
+	       
+       
+       
+    </div>
+  </div>
+  -->
+	<div class="footer-wrapper">
+		<div class="iconwrap">
+			<div class="wrap-inner">
+			<div class="icon-box">
+			<span><img src="img/car.png"></span>
+			<div class="icon-txt"><p class="ic">急速物流</p>
+			
+			</div>
+			</div>
+			
+			<div class="icon-box">
+			<span><img src="img/zheng.png"></span>
+			 <div class="icon-txt"><p class="ic">正品保障</p>
+			
+			</div>
+			</div>
+			<div class="icon-box">
+			<span><img src="img/serve.png"></span>
+			<div class="icon-txt"><p class="ic">售后服务</p>
+			
+			</div>
+			</div>
+			<div class="clear"></div>
+			</div>
+		</div>
+         
+		<div class="guide-links clearfix">
+			<div class="wrap-inner">
+			<div class="links-wrap">
+				<div class="links-wrap-inner">
+					<div class="links-b ">
+						<a target="_blank" href="#"><h4 class="l-title">
+								自助服务
+							</h4></a>
+						<div class="l-list">
+							<ul>
+								
+									<li><a
+										href="footorArticle.action?article.id=297e4ba249eec3b50149eed1353b0004">意见反馈</a></li>
+								
+									<li><a
+										href="footorArticle.action?article.id=297e4ba249eec3b50149eed679360005">退换货申请</a></li>
+								
+									<li><a
+										href="footorArticle.action?article.id=4028138149910d51014992e609590003">忘记密码</a></li>
+								
+							</ul>
+						</div>
+					</div>
+				
+					<div class="links-b ">
+						<a target="_blank" href="#"><h4 class="l-title">
+								新手课题
+							</h4></a>
+						<div class="l-list">
+							<ul>
+								
+									<li><a
+										href="footorArticle.action?article.id=297e4ba249eec3b50149eed7bc730006">新用户注册</a></li>
+								
+							</ul>
+						</div>
+					</div>
+				
+					<div class="links-b ">
+						<a target="_blank" href="#"><h4 class="l-title">
+								账号管理
+							</h4></a>
+						<div class="l-list">
+							<ul>
+								
+									<li><a
+										href="footorArticle.action?article.id=297e4ba249eec3b50149eedb36440007">退订邮件短信</a></li>
+								
+									<li><a
+										href="footorArticle.action?article.id=297e4ba249eec3b50149eedbbc130008">个人信息说明</a></li>
+								
+									<li><a
+										href="footorArticle.action?article.id=297e4ba249eec3b50149eedc4bfc0009">绑定手机邮箱</a></li>
+								
+							</ul>
+						</div>
+					</div>
+				
+					<div class="links-b ">
+						<a target="_blank" href="#"><h4 class="l-title">
+								配送方式
+							</h4></a>
+						<div class="l-list">
+							<ul>
+								
+									<li><a
+										href="footorArticle.action?article.id=297e4ba249eec3b50149eedceab3000a">商品验货与签收</a></li>
+								
+									<li><a
+										href="footorArticle.action?article.id=297e4ba249eec3b50149eedd4afe000b">查看订单物流</a></li>
+								
+									<li><a
+										href="footorArticle.action?article.id=297e4ba249eec3b50149eeddb5c9000c">配送政策说明</a></li>
+								
+							</ul>
+						</div>
+					</div>
+				
+					<div class="links-b ">
+						<a target="_blank" href="#"><h4 class="l-title">
+								购物指南
+							</h4></a>
+						<div class="l-list">
+							<ul>
+								
+									<li><a
+										href="footorArticle.action?article.id=297e4ba249eec3b50149eede20ce000d">订单状态</a></li>
+								
+									<li><a
+										href="footorArticle.action?article.id=297e4ba249eec3b50149eede6ff2000e">购物流程</a></li>
+								
+									<li><a
+										href="footorArticle.action?article.id=8ab781604b34bddd014b34c737d90007">购物类问题</a></li>
+								
+							</ul>
+						</div>
+					</div>
+					
+					
+				
+					<div class="links-b ">
+						<a target="_blank" href="#"><h4 class="l-title">
+								关于我们
+							</h4></a>
+						<div class="l-list">
+							<ul>
+								
+									<li><a
+										href="footorArticle.action?article.id=297e4ba249eec3b50149eecc6a780002">公司简介</a></li>
+								
+									<li><a
+										href="footorArticle.action?article.id=297e4ba249eec3b50149eeccba640003">联系我们</a></li>
+								
+							</ul>
+						</div>
+					</div>
+			
+					
+					
+			<!--
+            	作者：730377349@qq.com
+            	时间：2015-07-15
+            	描述：
+       		<div class="pholis">
+						<a target="_blank" href="#"><h4 class="l-title">
+								手机官网
+							</h4></a>
+						<div class="l-list">
+							<ul>
+								
+									<li class="img-bor"><img src="img/phone.jpg" /></li>
+								
+									
+								
+									
+								
+							</ul>
+						</div>
+					</div>
+					     -->
+					     
+                       
+					<div class="l-list-l">
+						
+								
+							
+						<ul>
+								<li class="list-li">合作伙伴:</li>
+									<li><a
+										href="http://www.tleshop.com" title="广州庭燎信息科技有限公司" target="_blank">庭燎科技</a></li>
+								
+									<li><a
+										href="http://www.budifo.com/" title="小妇人官网" target="_blank">小妇人集团</a></li>
+						
+								
+									
+									
+								
+							</ul>
+					</div>
+					  
+<div class="mainFooter">
+
+2014-2020©广州市小妇人内衣有限公司　　<a href="http://gsxt.gdgs.gov.cn/aiccips/"  target="_blank" style="margin-right: 5px;"><img src="../../front/img/gongshang.png"/></a>营业执照：440111000133178　 <a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action"  target="_blank" style="margin-right: 5px;"><img src="../../front/img/gongxing.png"/></a>粤ICP备09033122号-6
+</div>
+             </div>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<a href="http://www.91xfr.com:80/shoppingCar.action" style="bottom: 60px;
+    position: fixed;right: 1px; z-index: 110;height: 80px;width: 36px;
+">
+	<img src="img/shoppingcar.png"/>
+	
+	<!--
+    	作者：730377349@qq.com
+    	时间：2015-07-21
+    	描述：
+  
+	<p class="redpot" id="js_shoppingCarCount"></p>
+	  -->
+	
+</a>
+
+	<link rel="stylesheet" type="text/css" href="http://www.91xfr.com:80/front/css/qq_online_blue.css">
+	
+	<script src="http://www.91xfr.com:80/front/js/qq_online.js"></script>
+
+	<script> 
+			$(function(){
+				getShoppingCarCount();
+		var salename = '销售热线';
+		var tels = '020-86246218   400--6377888' ;
+		/*皮肤编号 lrkf_blue1 无图版，lrkf_blue2 图片版，更多皮肤敬请期待 懒人qq客服 - http://www.51xuediannao.com/qqkefu/*/
+		$("#lrkfwarp").lrkf({
+			kftop:'300',				//距离顶部距离
+			//btntext:'客服在线',			//默认为 客服在线 四个字，如果你了解css可以使用图片代替
+			defshow:false,			//如果想默认折叠，将defshow:false,的注释打开，默认为展开
+			//position:'absolute',		//如果为absolute所有浏览器在拖动滚动条时均有动画效果，如果为空则只有IE6有动画效果，其他浏览器
+			qqs:[{'name':'范经理','qq':'1711956294'},{'name':'于经理','qq':'1310633466'},],
+			tel:[
+				{'name':salename,'tel':tels}
+			],
+		});
+			
+	});
+
+
+		var getShoppingCarCount = function(){
+			$.ajax({
+				url: 'shoppingCarCount.action',
+				type: 'post',
+				cache: false,
+				success: function(data) {
+					//ajaxEnd
+					if (data == '0') {
+						$("#js_shoppingCarCount").hide();
+					} else {
+						$("#js_shoppingCarCount").show();
+						$("#js_shoppingCarCount").text(data);
+					}
+				}
+			});
+		}
+
+	</script>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?969c0a49176609a62dd3d3efa7db66ba";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+	<script type="text/javascript">
+		(function() {
+
+			function G(s) {
+				return document.getElementById(s);
+			}
+
+			function getStyle(obj, attr) {
+				if (obj.currentStyle) {
+					return obj.currentStyle[attr];
+				} else {
+					return getComputedStyle(obj, false)[attr];
+				}
+			}
+
+			function Animate(obj, json) {
+				if (obj.timer) {
+					clearInterval(obj.timer);
+				}
+				obj.timer = setInterval(function() {
+					for ( var attr in json) {
+						var iCur = parseInt(getStyle(obj, attr));
+						iCur = iCur ? iCur : 0;
+						var iSpeed = (json[attr] - iCur) / 5;
+						iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math
+								.floor(iSpeed);
+						obj.style[attr] = iCur + iSpeed + 'px';
+						if (iCur == json[attr]) {
+							clearInterval(obj.timer);
+						}
+					}
+				}, 30);
+			}
+
+			var oPic = G("picBox");
+			var oList = G("listBox");
+
+			var oPicLi = oPic.getElementsByTagName("li");
+			var oListLi = oList.getElementsByTagName("li");
+			var len1 = oPicLi.length;
+			var len2 = oListLi.length;
+
+			var oPicUl = oPic.getElementsByTagName("ul")[0];
+			var oListUl = oList.getElementsByTagName("ul")[0];
+			var w1 = oPicLi[0].offsetWidth;
+			var w2 = oListLi[0].offsetWidth;
+
+			oPicUl.style.width = w1 * len1 + "px";
+
+			var index = 0;
+
+			var num = 5;
+			var num2 = Math.ceil(num / 2);
+
+			function Change() {
+
+				Animate(oPicUl, {
+					left : -index * w1
+				});
+
+				for ( var i = 0; i < len2; i++) {
+					oListLi[i].className = "";
+					if (i == index) {
+						oListLi[i].className = "on";
+					}
+				}
+			}
+
+			for ( var i = 0; i < len2; i++) {
+				oListLi[i].index = i;
+				oListLi[i].onclick = function() {
+					index = this.index;
+					Change();
+				}
+			}
+
+		})()
+	</script>
+</body>
+</html>

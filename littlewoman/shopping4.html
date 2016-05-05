@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>支付订单</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="description" content='小妇人商城是致力于O2O最实用模式的专业商城，PC端商城和移动端微商城一体化运营.' />
+	<meta name="keywords" content='小妇人商城,潮流女包,绅士男包,聚金钱包,时尚箱包,精品皮带,皮革护理用品,时尚皮具,广州皮具,oto商城,企业商城,微商城' />
+	<link rel="stylesheet" href="http://www.91xfr.com:80/css/base.css">
+	<link rel="stylesheet" href="http://www.91xfr.com:80/front/css/common.css">
+	<link rel="stylesheet" href="http://www.91xfr.com:80/front/css/mall.css">
+	<link rel="stylesheet" href="http://www.91xfr.com:80/css/bootstrap.css">
+</head>
+<body>
+
+<input type="hidden" id="basePath" value="http://www.91xfr.com:80/"></input>
+
+
+
+
+
+<link rel="stylesheet" href="http://www.91xfr.com:80/css/base.css">
+<link rel="stylesheet" href="http://www.91xfr.com:80/front/css/common.css">
+<link rel="stylesheet" type="text/css" href="http://www.91xfr.com:80/css/dialog.css">
+<!--PC端模板样式添加处 -->
+ <link rel="stylesheet" href="http://www.91xfr.com:80/templet/littleWomen/css/colorStyle.css">
+ <link rel="stylesheet" href="css/style1.css" />
+<script type="text/javascript" src="http://www.91xfr.com:80/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://www.91xfr.com:80/js/jqueryui.js"></script>
+<script type="text/javascript" src="http://www.91xfr.com:80/js/simpleui.min.js"></script>
+<script type="text/javascript" src="http://www.91xfr.com:80/js/bootstrap.js"></script>
+<script type="text/javascript" src="http://www.91xfr.com:80/js/required.js"></script>
+<div class="head clearfix">
+   <input type="hidden" value="" id="idcard"/>
+   <input type="hidden" value="http://www.91xfr.com:80/" id="path"/>
+   <div class="head-inner">
+   	<a class="logo" href="http://www.91xfr.com:80/"><img src="http://www.91xfr.com:80/templet/littleWomen/img/logo.png" alt="小妇人商城"/></a>
+   	<div class="head-tool">
+			
+					<span>您好，</span>
+					<span id="vip_name" class="vip-name" >
+					
+					<a href="getMenu.action">
+					
+					730377349(个人中心)</a></span>
+				    <span>，欢迎来到小妇人商城</span>
+					<a href="getMenu.action?index=order" class="vip-order">我的订单</a>
+					
+					
+
+					<a href="http://www.91xfr.com:80/collectionList.action" class="vip-order">收藏夹</a>
+
+					<a id="login" class="vip-login-out" onclick="loginOut()">退出</a>
+					
+		</div>
+   </div>
+	
+	
+</div>
+
+
+<script type="text/javascript" src="http://www.91xfr.com:80/js/jquery.blockUI.js"></script>
+	<img id="blockUiLoding" class="hide" src="http://www.91xfr.com:80/front/img/loading38.gif"/>
+	<script type="text/javascript">
+	 function shade(){
+		 $("body").block({ 
+	                message:$("#blockUiLoding"), 
+	                css: { border: 'none'} 
+	            }); 
+
+		 setTimeout(removeShade, 30000); 
+		} ;
+
+	function removeShade(){
+		$('body').unblock(); 
+	};
+</script>
+<script type="text/javascript" src="http://www.91xfr.com:80//front/js/login.js"></script>
+<script type="text/javascript" src="http://www.91xfr.com:80/front/js/menu.js"></script>
+<script type="text/javascript" src="http://www.91xfr.com:80/js/jquery.cookie.js"></script>
+<div class="dialog-wrap">
+	<div class="dialog-wrap-inner">
+		<!--购物导航-->
+		<!--
+        	作者：730377349@qq.com
+        	时间：2015-07-23
+        	描述：
+      
+		<ul class="pro-bar">
+			<li class="pro-bar-past">1、加入购物车<span></span></li>
+			<li class="pro-bar-past">2、确认订单<span></span></li>
+			<li class="pro-bar-active">3、付款<span></span></li>
+			<li class="pro-bar-last">4、购物成功</li>
+		</ul>
+		  -->
+		  <div class="pro-bar"><img src="img/shopping-progrance4.png"></div>
+		<form action="" method="post" id="paymentForm">
+			
+			<!-- 差额：账户余额跟支付订单的差额 -->
+			<input type="hidden" id="balance" value=""></input>
+			<input type="hidden" id="orderType" value="goods"></input>
+			<input type="hidden" id="orderId" name="orderIds" class="orderId" value="_f89bb1cd4eb4e9e5014eb4f6a2d20019"></input>
+			<input type="hidden" id="availSum" value="0" />
+			<input type="hidden" id="amountSum" name="payAmount" value="253.44"></input>
+			<input type="hidden" id="alipay_payType" name="alipay_payType" value=""></input><!-- 支付宝支付方式：全额支付，部分支付 -->
+			<input type="hidden" id="alipay_paySum" name="alipay_paySum" value=""></input><!-- 微信支付金额 -->
+		    <div class="success-box">
+		    	<div class="success-img"><img src="img/paysuccess.png"/></div>
+		    	<div class="success-right">
+		    		<p>支付已经成功</p>
+		    		<input class="surebtn" type="button" value="确定" />
+		    	</div>
+		    </div>
+			
+			<!--
+            	作者：730377349@qq.com
+            	时间：2015-07-23
+            	描述：
+            
+			<div class="paymentBox">
+				<header>应付金额：<span>253.44</span></header>
+				<div style="margin:30px 40px">
+					<label class="paymentTitle">选择支付账户:</label>
+					<label><input class="pay_checkbox" type="checkbox" name="cb_payment" value="account_pay">&nbsp;&nbsp;我的账户&nbsp;&nbsp;余额:&nbsp;0</label>
+
+					
+					<label><input class="pay_checkbox" type="checkbox" name="cb_payment" value="alipay_pay"><img style="width:50px;margin: 0 10px" src="http://www.91xfr.com:80/front/img/zhifubao.png">&nbsp;&nbsp;<span id="span_text">支付宝支付</span>&nbsp;<span id="span_availSum"></span></label>
+					
+					<div id="pay_passwd">
+						<label class="paymentTitle" style=" margin-top: 20px;">商城支付密码:</label>
+						<input type="password" name="paymentPw" id="payTd" class="input-xlarge" >
+					</div>
+				</div>
+				<!-- 代付start：暂时无用 -->
+				<!--
+                	作者：730377349@qq.com
+                	时间：2015-07-23
+                	描述：
+                
+				<div style="display: none" class="agentDiv">
+					<label>支付的总金额:</label>
+					<input class="uneditable-input" id="amountSum" readonly="readonly" type="text" value="253.44000000000003"></input>
+					<div class="cb"></div>
+					<label>代付人:</label>
+					<input class="input-xlarge" type="text" name="payingAgentKeywords" id="payingAgentKeywords" />
+				</div>
+				<!-- 代付end：暂时无用 -->
+				<!--
+                	作者：730377349@qq.com
+                	时间：2015-07-23
+                	描述：
+               
+				<input id="surePayment" style="float: right; margin-right: 40px;" type="button"  class="btn btn-primary orderpay-btn-balance" value="确认支付">
+				<p class="paymentWarn" id="noticeTip"></p>
+				-->
+			    <!-- 支付遮罩 -->
+			    <!--
+                	作者：730377349@qq.com
+                	时间：2015-07-23
+                	描述：
+           
+			    <div id="myModal" class="modal hide fade" tabindex="-1">
+				    <div class="modal-header">
+					    <h3 id="myModalLabel">付款提示</h3>
+				    </div>
+				    <div class="modal-body">
+					    <p>请问您完成付款了吗?<br>如没有,请在新打开的网上银行页面进行付款的操作</p>
+				    </div>
+				    <div class="modal-footer">
+					    <a class="backto-pay" data-dismiss="modal">返回继续付款</a>
+					    <a class="complete-pay">完成付款</a>
+				    </div>
+			    </div>
+			</div>
+			-->
+		</form>
+	</div>
+</div>
+</body>
+	<script src="http://www.91xfr.com:80/front/js/login.js"></script>
+	<script src="http://www.91xfr.com:80/front/product/js/payment.js"></script>
+	<script src="http://www.91xfr.com:80/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#for-myModal").click(function(){
+				$('#myModal').modal('show');
+			});
+		});
+	</script>
+	
+</html>

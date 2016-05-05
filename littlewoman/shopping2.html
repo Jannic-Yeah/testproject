@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>确认订单</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="description" content='小妇人商城是致力于O2O最实用模式的专业商城，PC端商城和移动端微商城一体化运营.' />
+	<meta name="keywords" content='小妇人商城,潮流女包,绅士男包,聚金钱包,时尚箱包,精品皮带,皮革护理用品,时尚皮具,广州皮具,oto商城,企业商城,微商城' />
+	<link rel="stylesheet" href="http://www.91xfr.com:80/css/base.css">
+	<link rel="stylesheet" href="http://www.91xfr.com:80/front/css/common.css">
+	<link rel="stylesheet" href="http://www.91xfr.com:80/front/css/mall.css">
+	<script type="text/javascript" src="bootstrap/js/jquery-1.7.2.min.js" ></script>
+	<style type="text/css">
+		.aui_dialog .aui_main{height:350px;}
+		.place-list{padding:2px 5px;margin:2px 0px;}
+		.place-list.active{background:#FFE6BC;}
+		
+	</style>
+</head>
+<body>
+<input id="basePath" value="http://www.91xfr.com:80/" type="hidden"/>
+
+
+
+
+
+<link rel="stylesheet" href="http://www.91xfr.com:80/css/base.css">
+<link rel="stylesheet" href="http://www.91xfr.com:80/front/css/common.css">
+<link rel="stylesheet" type="text/css" href="http://www.91xfr.com:80/css/dialog.css">
+<!--PC端模板样式添加处 -->
+ <link rel="stylesheet" href="http://www.91xfr.com:80/templet/littleWomen/css/colorStyle.css"> 
+ <link rel="stylesheet" href="css/style1.css" />
+<script type="text/javascript" src="http://www.91xfr.com:80/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://www.91xfr.com:80/js/jqueryui.js"></script>
+<script type="text/javascript" src="http://www.91xfr.com:80/js/simpleui.min.js"></script>
+<script type="text/javascript" src="http://www.91xfr.com:80/js/bootstrap.js"></script>
+<script type="text/javascript" src="http://www.91xfr.com:80/js/required.js"></script>
+<div class="head clearfix">
+   <input type="hidden" value="" id="idcard"/>
+   <input type="hidden" value="http://www.91xfr.com:80/" id="path"/>
+   <div class="head-inner">
+   	<a class="logo" href="http://www.91xfr.com:80/"><img src="http://www.91xfr.com:80/templet/littleWomen/img/logo.png" alt="小妇人商城"/></a>
+   	<div class="head-tool">
+			
+					<span>您好，</span>
+					<span id="vip_name" class="vip-name" >
+					
+					<a href="getMenu.action">
+					
+					730377349(个人中心)</a></span>
+				    <span>，欢迎来到小妇人商城</span>
+					<a href="getMenu.action?index=order" class="vip-order">我的订单</a>
+					
+					
+
+					<a href="http://www.91xfr.com:80/collectionList.action" class="vip-order">收藏夹</a>
+
+					<a id="login" class="vip-login-out" onclick="loginOut()">退出</a>
+					
+		</div>
+   </div>
+	
+	
+</div>
+
+
+<script type="text/javascript" src="http://www.91xfr.com:80/js/jquery.blockUI.js"></script>
+	<img id="blockUiLoding" class="hide" src="http://www.91xfr.com:80/front/img/loading38.gif"/>
+	<script type="text/javascript">
+	 function shade(){
+		 $("body").block({ 
+	                message:$("#blockUiLoding"), 
+	                css: { border: 'none'} 
+	            }); 
+
+		 setTimeout(removeShade, 30000); 
+		} ;
+
+	function removeShade(){
+		$('body').unblock(); 
+	};
+</script>
+<script type="text/javascript" src="http://www.91xfr.com:80//front/js/login.js"></script>
+<script type="text/javascript" src="http://www.91xfr.com:80/front/js/menu.js"></script>
+<script type="text/javascript" src="http://www.91xfr.com:80/js/jquery.cookie.js"></script>
+<div class="dialog-wrap">
+	<div class="dialog-wrap-inner">
+		<!--购物导航-->
+		<!--
+        	作者：730377349@qq.com
+        	时间：2015-07-23
+        	描述：
+        
+		<ul class="pro-bar">
+			<li class="pro-bar-past">1、加入购物车<span></span></li>
+			<li class="pro-bar-active">2、确认订单<span></span></li>
+			<li>3、付款<span></span></li>
+			<li class="pro-bar-last">4、购物成功</li>
+		</ul>
+		-->
+		
+  <div class="pro-bar"><img src="img/shopping-progrance2.jpg"></div>
+		<form action="submitOrder.action" id="orderForm" method="post" class="confirm-wrap form-horizontal">
+			<!--
+            	作者：730377349@qq.com
+            	时间：2015-07-23
+            	描述：
+          
+			<div id="ourPlace">
+				<h1 class="dialog-title" style="margin-top:10px;margin-bottom:10px;">选择收货地址</h1>
+					<div class="dialog-contentBox" style="border:1px solid #ddd;">
+						<table style="width: 100%;margin: 10px 0">
+							
+								<tr class="place-list">
+									<td>
+									<input type="hidden" class="placeId" value="f89bb1cd4eb4e9e5014eb4edcfda000d"></input>
+									<input type="hidden" class="param" value="ye,18819457437,,156,中国,44,广东省,4401,广州市,440106,天河区,龙洞"></input>
+									</td>
+									<td  style="padding: 5px 10px;">
+									
+										<span class="sendTo">寄送至</span>&nbsp;&nbsp;
+										<input type="radio" name="checkPlace" class="checkPlace" checked="checked"></input>&nbsp;&nbsp;
+									
+									
+									</td>
+									<td>
+									广东省广州市天河区龙洞&nbsp;&nbsp;
+									</td>
+									<td>
+									(ye&nbsp;&nbsp; 收)&nbsp;&nbsp;
+									</td>
+									<td>
+									18819457437&nbsp;&nbsp;
+									</td>
+									<td>
+									<a class="editPlace aUnderline">修改</a>&nbsp;&nbsp;
+									<a class="default aUnderline">设为默认收货地址</a>&nbsp;&nbsp;
+									<a class="delete aUnderline">删除</a>
+									</td>
+								</tr>
+							
+							</table>
+						<a class="addPlace btn">使用新地址</a>
+					</div>
+					
+			   	<div>
+			   		<input type="hidden" name="busiGoodsOrder.consignee" id="consignee" />
+			   		<input type="hidden" name="busiGoodsOrder.phone" id="phone" />
+			   		<input type="hidden" name="busiGoodsOrder.postcode" id="postcode" />
+			   		<input name="busiGoodsOrder.cCountryCode" value="156" type="hidden" id="cCountryCode"/>
+			   		<input name="busiGoodsOrder.cProvinceCode" type="hidden" id="cProvinceCode"/>
+			   		<input name="busiGoodsOrder.cCityCode" type="hidden" id="cCityCode"/>
+			   		<input name="busiGoodsOrder.cAreaCode" type="hidden" id="cAreaCode"/>
+			   		<input name="busiGoodsOrder.cCountry" value="中国" type="hidden" id="cCountry"/>
+			   		<input name="busiGoodsOrder.cProvince" type="hidden" id="cProvince"/>
+			   		<input name="busiGoodsOrder.cCity" type="hidden" id="cCity"/>
+			   		<input name="busiGoodsOrder.cArea" type="hidden" id="cArea"/>
+			   		<input type="hidden" name="busiGoodsOrder.address" id="address" >
+			   		<input type="hidden" name="orderType" value="1" />
+			   	</div>
+			</div>
+			  -->
+			<!--
+            	作者：730377349@qq.com
+            	时间：2015-07-23
+            	描述：
+            
+			<h1 class="dialog-title" style="margin-top:10px;margin-bottom:10px;">确认订单信息</h1>
+		-->
+			<div class="dialog-title"><p class="p1">核对信息</p></div>
+				<div id="Place">
+					<p class="place-title">选择收货地址</p>
+					<p class="place-right"><a href="">新增收货地址</a></p>
+					<div class="clear"></div>
+					<div class="place-box selected">
+						<p class="txt1"><span>广州天河</span><span>&nbsp(叶桂芳&nbsp;收)</span></p>
+						<p class="txt2"><span>天河龙洞迎龙路161号广东工业大学</span><span>&nbsp18819457437</span></p>
+						<a  class="revise" href="#">修改</a>
+					</div>
+					<div class="place-box b2">
+						<p class="txt1"><span>广州天河</span><span>&nbsp(叶桂芳&nbsp;收)</span></p>
+						<p class="txt2"><span>天河龙洞迎龙路161号广东工业大学</span><span>&nbsp18819457437</span></p>
+						
+					</div>
+					<div class="place-box">
+						<p class="txt1"><span>广州天河</span><span>&nbsp(叶桂芳&nbsp;收)</span></p>
+						<p class="txt2"><span>天河龙洞迎龙路161号广东工业大学</span><span>&nbsp18819457437</span></p>
+						
+					</div>
+					<div class="clear"></div>
+					<div class="placeshow"><a href="#">显示所有收货地址</a></div>
+				</div>
+				<div style="margin-bottom:5px;">
+						<div class="table-title">
+							<p>确认订单信息</p>
+						<ul>
+							<li class="li-fist" style="width: 100px;">
+							</li>
+							<li style="width: 315px;">商品名称</li>
+							<li style="width: 120px;">单价（元）</li>
+							<li style="width: 200px;">数量</li> 
+							<li style="width: 120px;">小计（元）</li>
+							<li style="width: 120px;">操作</li>
+						</ul>
+					</div>
+					<script>
+						$(function(){
+							$(".place-box").hover(function(){
+								if(!$(this).is(".selected")){
+								$(this).addClass("selecting");
+								}
+							},function(){
+								$(this).removeClass("selecting");
+							})
+							$(".place-box").click(function(){
+								$(this).removeClass("selecting");
+								var a=$("<a class='revise'>修改</a>");
+								$(this).find(".revise").remove();
+								$(this).addClass("selected").siblings().removeClass("selected");
+								$(this).siblings().find(".revise").remove();
+							    $(this).append(a);
+							});
+						});
+					</script>
+					<table class="table-bordered goodsDateTable" style="font-size:14px;">
+				<!--
+                	作者：730377349@qq.com
+                	时间：2015-07-23
+                	描述：
+              	<tr style="background="#eee">
+						<th style="width: 400px" colspan="2"><span>商品名称</span>
+						     <input type="hidden" name="merchantList" value=""></input>
+							
+							<input type="hidden" class="freeFreight" value=""/>
+							<input type="hidden" id="freight" value=""/>
+						</th>
+						<th>单价(元)</th>
+						<th>数量</th>
+						<th>小计(元)</th>
+						<th>操作</th>
+					</tr>
+					  -->
+					
+						<tr class="shop2-tr">
+						<td style="display: none;">
+						<input type="hidden" name="goodsId" value="f89bb1cd4e489941014e4c675be9008f"></input>
+						<input type="hidden" name="merchantId" value="tleshop"></input>
+						<input type="hidden" class="goodsFreightType" value=""></input>
+						<input type="hidden" name="chooseIdList" value="1435721057096_1435820986562"></input>
+						<input type="hidden" name="chooseNameList" value="颜色：蓝色  尺码：L"></input>
+						<input type="hidden" name="chooseWList" value="0.0"></input>
+						<input type="hidden" name="choosePList" value="68.64"></input>
+						<input type="hidden" name="chooseSList" value="600"></input>
+						</td>
+						
+						<td class="shopping-img">
+							
+						   
+							<img src="http://www.91xfr.com:80//uploadFile/goods/small_3fddd686-988d-4e0f-b2cc-4cc828e8486d.jpg" onerror="this.src='http://www.91xfr.com:80//uploadFile/goods/3fddd686-988d-4e0f-b2cc-4cc828e8486d.jpg'" height="50px" width="50px"/>
+							
+						</td>
+						<td class="shopping-message">小妇人闪耀芳华LW6316中腰蕾丝无痕平角裤</td>
+						<td class="shopping-s s-txt"><span style="color:#EF5350">颜色：蓝色 <br/> 尺码：L</span></td>
+						<td class="unitPrice shopping-s tt" >
+							
+							68.64
+						</td>
+						<td class="s-txt2">
+						<input type="text" id="num" class="num" name="goodsNum" value="20" onkeyup='this.value=this.value.replace(/[^0-9]/gi,"")'></input>
+						<input type="hidden" class="busiInsaleGoodsName" value="小妇人闪耀芳华LW6316中腰蕾丝无痕平角裤"></input>
+						    <span class="tt">
+							(库存: 600)
+							</span>
+							<input type="hidden" class="goodsStock" value="600"></input>
+						
+						</td>
+						<td class="amountPrice shopping-s tt" >
+						  1372.8
+						</td>
+						<td class="shopping-s"><a href="#">移入收藏夹</a>
+							<br />
+							<a href="#">删除</a>
+							
+						</td>
+					</tr>
+                        
+                        
+						
+						
+						
+						
+					
+
+					<!-- 首先判断是买家支付，还是买家支付，如果是买家支付那就还要判断是全国统一价，还是模版价，如果是模板价，那就还要判断模板中选择了哪几种邮寄方式（快递，EMS，平邮） -->
+					<tr>
+						<td style="display: none">
+							<input type="hidden" class="startE" value="0"></input>
+							<input type="hidden" class="postageE" value=""></input>
+							<input type="hidden" class="plusE" value="0"></input>
+							<input type="hidden" class="postageplusE" value=""></input>
+							<input type="hidden" class="startM" value="0"></input>
+							<input type="hidden" class="postageM" value=""></input>
+							<input type="hidden" class="plusM" value="0"></input>
+							<input type="hidden" class="postageplusM" value=""></input>
+							<input type="hidden" class="startP" value="0"></input>
+							<input type="hidden" class="postageP" value=""></input>
+							<input type="hidden" class="plusP" value="0"></input>
+							<input type="hidden" class="postageplusP" value=""></input>
+							<input type="hidden" class="type" value="0"></input>
+							<input type="hidden" class="secondType" value="0"></input>
+							<input type="hidden" class="express" value=""></input>
+							<input type="hidden" class="ems" value=""></input>
+							<input type="hidden" class="post" value=""></input>
+							<input type="hidden" class="amount" value="0"></input>
+							<input type="hidden" class="freightNum" value="0"></input>
+							<input type="hidden" class="mId" value=""></input>
+							<input type="hidden" class="name" value="小妇人商城"></input>
+							<input type="hidden" class="typeNum" value="0"></input>
+							
+						</td>
+						<td style="display: none">
+							<input type="hidden" name="freightMId" class="freightMId" value=""></input>
+							<input type="hidden" name="remarkList" class="remarkList" value=""></input>
+							<input type="hidden" name="sendTypeList" class="sendTypeList" value=""></input>
+							<input type="hidden" name="amountFreight" class="amountFreight" value=""></input>
+							<input type="hidden" name="freightNum" value="0"></input>
+						</td>
+						<td width="350">
+							<label for="input01" class="control-label" style="width:80px;text-align:left;color:#A0A0A0">买家留言:</label>
+		            		<textarea style="resize: none;" rows="2" name="buyerRemarkList" class="buyerRemarks" maxlength="300"></textarea>
+
+						</td>
+						<td width="650">
+							<label class="showTotalMoney"></label>
+						</td>
+
+						
+					</tr>
+					</table>
+					</div>
+				
+			
+		
+		
+			<h1 class="dialog-title hh" style="margin-top:10px;margin-bottom:10px;">选择支付方式</h1>
+			<div style="border-bottom:1px solid #B5B5B5;padding-bottom: 20px; color:#434343;
+	font-size: 14px;">
+				<input type="radio" name="busiGoodsOrder.isPay" value="0" checked="checked" />&nbsp;在线支付&nbsp;&nbsp;
+				
+				<input type="radio" name="busiGoodsOrder.isPay" value="3" />&nbsp;积分兑换
+				<input id="submitOrder" type="button" value="提交订单" class="btn btn-primary">
+			</div>
+			<div class="shopping-btn">
+						<input type="button" value="继续购物" />
+					</div>
+		 <!--
+         	作者：730377349@qq.com
+         	时间：2015-07-23
+         	描述：
+        
+			<div class="clearfix" style="text-align:center;margin-top:20px;">
+				<span id="msg"></span>
+			</div>
+		
+          <div class="clearfix" style="text-align:center;margin-top:20px;">
+            <input id="submitOrder" type="button" value="提交订单" class="btn btn-primary"></input>
+            <input type="button" value="返回" class="btn " onclick="history.go(-1)" ></input>
+          </div>
+           -->
+		</form>
+		
+	</div>
+</div>
+</body>
+	<script type="text/javascript" src="http://www.91xfr.com:80/js/address/area.js"></script>
+	<script type="text/javascript" src="http://www.91xfr.com:80/js/ajaxLogin.js"></script>
+	<script type="text/javascript" src="http://www.91xfr.com:80/js/validate.js"></script>
+	<script src="http://www.91xfr.com:80/front/product/js/submitOrder.js"></script>
+</html>

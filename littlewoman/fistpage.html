@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>小妇人商城</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content='小妇人商城是致力于O2O最实用模式的专业商城，PC端商城和移动端微商城一体化运营.' />
+<meta name="keywords" content='小妇人商城,潮流女包,绅士男包,聚金钱包,时尚箱包,精品皮带,皮革护理用品,时尚皮具,广州皮具,oto商城,企业商城,微商城' />
+<link rel="stylesheet" href="http://www.91xfr.com:80/front/css/main.css">
+<link rel="stylesheet" href="http://www.91xfr.com:80//front/css/common.css">
+<link rel="stylesheet" href="css/iconfont.css" />
+	<script type="text/javascript" src="http://www.91xfr.com:80/plugins/lunbo/js/jquery.js"></script>
+	<script type="text/javascript">
+		function banner(){
+			var bn_id = 0;
+			var bn_id2= 1;
+			var speed33=3000;
+			var qhjg = 1;
+			var MyMar33;
+			$("#banner .d1").hide();
+			$("#banner .d1").eq(0).fadeIn("slow");
+			if($("#banner .d1").length>1)
+			{
+				$("#banner_id li").eq(0).addClass("nuw");
+				function Marquee33(){
+					bn_id2 = bn_id+1;
+					if(bn_id2>$("#banner .d1").length-1)
+					{
+						bn_id2 = 0;
+					}
+					$("#banner .d1").eq(bn_id).css("z-index","2");
+					$("#banner .d1").eq(bn_id2).css("z-index","1");
+					$("#banner .d1").eq(bn_id2).show();
+					$("#banner .d1").eq(bn_id).fadeOut("slow");
+					$("#banner_id li").removeClass("nuw");
+					$("#banner_id li").eq(bn_id2).addClass("nuw");
+					bn_id=bn_id2;
+				};
+
+				MyMar33=setInterval(Marquee33,speed33);
+
+				$("#banner_id li").click(function(){
+					var bn_id3 = $("#banner_id li").index(this);
+					if(bn_id3!=bn_id&&qhjg==1)
+					{
+						qhjg = 0;
+						$("#banner .d1").eq(bn_id).css("z-index","2");
+						$("#banner .d1").eq(bn_id3).css("z-index","1");
+						$("#banner .d1").eq(bn_id3).show();
+						$("#banner .d1").eq(bn_id).fadeOut("slow",function(){qhjg = 1;});
+						$("#banner_id li").removeClass("nuw");
+						$("#banner_id li").eq(bn_id3).addClass("nuw");
+						bn_id=bn_id3;
+					}
+				})
+				$("#banner_id").hover(
+						function(){
+							clearInterval(MyMar33);
+						}
+						,
+						function(){
+							MyMar33=setInterval(Marquee33,speed33);
+						}
+				)
+			}
+			else
+			{
+				$("#banner_id").hide();
+			}
+		}
+	</script>
+	
+</head>
+
+<style>
+html{background: url("http://www.91xfr.com:80/img/debut_light.png") repeat scroll 0 0 rgba(0, 0, 0, 0)!important;}
+.icon-color{
+color: #666;
+font-weight: 400;
+}
+/* banner */
+.banner {height:550px;overflow:hidden;}
+.banner .d1{width:100%;height:550px;display:block;position:absolute;left:0px;top:0px;}
+.banner .d2{width:100%;height:30px;clear:both;position:absolute;z-index:100;left:0px;top:500px;}
+.banner .d2 ul{float:left;position:absolute;left:50%;top:0;display:inline;}
+.banner .d2 li{width:17px;height:15px;overflow:hidden;cursor:pointer;background:url(http://www.91xfr.com:80/plugins/lunbo/images/img1.png) no-repeat center;float:left;margin:0 3px;display:inline;}
+.banner .d2 li.nuw{background:url(http://www.91xfr.com:80/plugins/lunbo/images/img1_1.png) no-repeat center;}
+/*new*/
+.
+</style>
+<body>
+	
+
+
+
+
+<link rel="stylesheet" href="http://www.91xfr.com:80/css/base.css">
+<link rel="stylesheet" href="http://www.91xfr.com:80/front/css/common.css">
+<link rel="stylesheet" type="text/css" href="http://www.91xfr.com:80/css/dialog.css">
+<!--PC端模板样式添加处 -->
+ <link rel="stylesheet" href="http://www.91xfr.com:80/templet/littleWomen/css/colorStyle.css"> 
+ <link rel="stylesheet" href="css/style1.css" />
+<script type="text/javascript" src="http://www.91xfr.com:80/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://www.91xfr.com:80/js/jqueryui.js"></script>
+<script type="text/javascript" src="http://www.91xfr.com:80/js/simpleui.min.js"></script>
+<script type="text/javascript" src="http://www.91xfr.com:80/js/bootstrap.js"></script>
+<script type="text/javascript" src="http://www.91xfr.com:80/js/required.js"></script>
+<script type="text/javascript" src="bootstrap/js/jquery-1.7.2.min.js" ></script>
+	<div class="head-top"> 
+		<div class="touming"></div>
+		<div class="head-container">
+			<span><img src="img/head-txt.png"></span>
+			<div class="top-input">
+			<input type="text" class="top-txt" />
+			<input type="button" value="搜索" class="top-btn" />
+			</div>
+			<p class="top-right"><a href="#">软件订购</a></p>
+			</div>
+		</div>
+		<script>
+				$(function(){
+				var height=880;
+				$(window).scroll(function(){
+					if($(this).scrollTop()>height)
+					{
+						$(".head-top").addClass("show").slideDown();
+					}
+					else
+					{
+						$(".head-top").removeClass("show").slideUp();
+					}
+				})
+			})
+		</script>
+<div class="head clearfix">
+   <input type="hidden" value="null" id="idcard"/>
+   <input type="hidden" value="http://www.91xfr.com:80/" id="path"/>
+   <div class="head-inner">
+   <!--
+ 
+   	时间：2015-07-20
+   	描述：
+	<a class="logo" href="http://www.91xfr.com:80/"><img src="http://www.91xfr.com:80/templet/littleWomen/img/logo.png" alt="小妇人商城"/></a>
+	   -->
+   	<div class="head-tool">
+			    <ul>
+			    	
+				<li><span>您好，欢迎来到小妇人商城</span></li>
+				<li>
+			    <span id="vip_name" class="vip-name" ></span>
+			    <a class="vip-order" style="display: none;">我的订单</a>
+			    <a class="vip-order" style="display: none;position:relative">购物车
+			    <i class="redDot"></i>
+			    </a>
+			    </li>
+				
+
+		       <li><a href="http://www.91xfr.com:80/login_vip.jsp">请登录</a></li>
+		       <li><a href="http://www.91xfr.com:80/login_vip.jsp?type=register">免费注册</a></li> 
+				
+				<li class="spe">
+					<a href="">
+					<span><img src="img/sml-pho.png"/></span>
+					手机版	
+					</a>
+					<div class="head-pho" ><img src="img/phone.jpg" ></div>
+					
+
+				</li>
+				
+				
+				<li>
+			    <a  href="http://www.tleshop.com/front/classification.jsp" target="_blank">
+			    	<span style="color: #D50000;">？</span>
+			    	软件订购</a>
+			    	</li>
+				
+				</ul>
+		</div>
+   </div>
+	
+	
+</div>
+<script>
+	$(function(){
+		var $div_li=$(".spe");
+		$div_li.hover(function(){
+			$(this).children(".head-pho").show();
+		},function(){
+			$(this).children(".head-pho").hide();
+		});
+		
+	})
+</script>
+
+
+<script type="text/javascript" src="http://www.91xfr.com:80/js/jquery.lockUI.js"></script>
+	<img id="blockUiLoding" class="hide" src="http://www.91xfr.com:80/front/img/loading38.gif"/>
+	<script type="text/javascript">
+	 function shade(){
+		 $("body").block({ 
+	                message:$("#blockUiLoding"), 
+	                css: { border: 'none'} 
+	            }); 
+
+		 setTimeout(removeShade, 30000); 
+		} ;
+
+	function removeShade(){
+		$('body').unblock(); 
+	};
+</script>
+<script type="text/javascript" src="http://www.91xfr.com:80//front/js/login.js"></script>
+<script type="text/javascript" src="http://www.91xfr.com:80/front/js/menu.js"></script>
+<script type="text/javascript" src="http://www.91xfr.com:80/js/jquery.cookie.js"></script>
+
+
+	<!--LOGO页头行   开始  -->
+	
+
+
+
+
+
+
+
+
+
+<head><link rel="stylesheet" href="http://www.91xfr.com:80/css/common.css"><link rel="stylesheet" href="http://www.91xfr.com:80/plugins/iconfont/iconfont.css"></head>
+<input type="hidden" id="basePath" value="http://www.91xfr.com:80/" />
+<div class="topAbout">
+	<div class="nav2">
+		<div class="logo left">
+			<div class="left">
+				<a href="http://www.91xfr.com:80/">
+					<img alt="logo" src="img/logo.png" href="http://www.91xfr.com:80/" >
+									</a>
+			</div>
+		</div>
+		<div class="search left">
+			<form>
+				<div class="search_input">
+					<input type="text" value="查询:商品名称" name="keyword"
+						   id="keywordsValue" class="searchBoxTwo left"> <input
+						type="button" id="searchGood" class="searchTijiao left" value="搜索">
+				</div>
+			</form>
+			<div class="hotTab left">
+				
+				
+					<a class="odd"
+							href='http://www.91xfr.com:80/front/classification.jsp?keywordsend=内衣'>内衣</a>
+							<a
+							href='http://www.91xfr.com:80/front/classification.jsp?keywordsend=内衣'>文胸</a>
+				
+					<a  class="odd"
+							href='http://www.91xfr.com:80/front/classification.jsp?keywordsend=岸芷汀兰'>岸芷汀兰</a>
+				
+			</div>
+		</div>
+			<div class="new right">
+				<div class="new-box">
+					<p>手机商城</p>
+					<div class="new-img">
+						<img src="img/conserned.jpg">
+					</div>
+					<div class="new-btn"><input class="btn-new" type="button" value="X"></div>
+				</div>
+				<!--
+                	作者：730377349@qq.com
+                	时间：2015-08-06
+                	描述：
+                
+				<div class="new-box">
+					<p>关注我们</p>
+					<div class="new-img">
+						<img src="img/conserned.jpg">
+						
+					</div>
+					<div class="new-btn"><input class="btn-new" type="button" value="X"></div>
+				</div>
+				-->
+			</div>
+		<script>
+			$(function(){
+				$(".btn-new").click(function(){
+					$(this).parents(".new-box").hide();
+				})
+			})
+		</script>
+		<!--使用字幕滚动，同时要注释下面font-head那一段div
+                 <div id="scrollingBox">
+                      <div id="scrolling1">
+                        <a href="#">0先生 广东 广州 TN高雅系列 TN3 ￥23000</a><br />
+                        <a href="#">1先生 广东 东莞 YH银河系列 UP120YH ￥20000</a><br />
+                        <a href="#">2先生 广东 清远 精英系列 JY120A ￥19000</a><br />
+                        <a href="#">3先生 广东 广州 TN高雅系列 TN3 ￥23000</a><br />
+                        <a href="#">4先生 广东 东莞 YH银河系列 UP120YH ￥20000</a><br />
+                    </div>
+                    <div id="scrolling2"></div>
+                </div>   -->
+                <!--
+                	
+                	时间：2015-07-20
+                	描述：
+              
+		<div class="zhengpin left">
+			<div class="font-head"><h1><i class="icon iconfont">&#xe72c;</i>&nbsp;正品保障</h1>
+				<h1 id="shouHou"><i class="icon iconfont">&#xe61a;</i>&nbsp;售后无忧</h1>
+			</div>
+			<div class="weixing"><img  src="http://www.91xfr.com:80/templet/littleWomen/img/phone.jpg" width="65">
+				<p>手机商城</p>
+
+			</div>
+			<div class="weixing1"><img  src="http://www.91xfr.com:80/templet/littleWomen/img/conserned.jpg" width="65">
+				<p>关注我们</p>
+
+			</div>
+		</div>
+		-->
+	</div>
+</div>
+<!--LOGO页头行   结束 -->
+<!--功能菜单行   开始-->
+<div class="nav_menu">
+	<div class="goodsMenu">
+		<div style="cursor:pointer; width: 200px;"  onclick="window.open('http://www.91xfr.com:80/front/classification.jsp?styleType=styleOne','_self')" class="goodsname left">
+			<strong>全部商品分类</strong>
+		</div>
+		<div class="channel">
+			<ul>
+				<li><a href="http://www.91xfr.com:80/"
+					   class="a_channel_hover" id="high">首页</a></li>
+				<li class=''><a href='http://www.91xfr.com:80/front/classification.jsp?categoryId=f89bb1cd4e3f2eb1014e42467f1e0020&hover=f89bb1cd4e3f2eb1014e42467f1e0020&styleType=styleOne'>文胸</a></li><li class=''><a href='http://www.91xfr.com:80/front/classification.jsp?categoryId=f89bb1cd4e3f2eb1014e4248121c0022&hover=f89bb1cd4e3f2eb1014e4248121c0022&styleType=styleOne'>内裤</a></li><li class=''><a href='http://www.91xfr.com:80/front/classification.jsp?categoryId=f89bb1cd4e3f2eb1014e42491b4c0024&hover=f89bb1cd4e3f2eb1014e42491b4c0024&styleType=styleOne'>家居服</a></li><li class=''><a href='http://www.91xfr.com:80/front/classification.jsp?categoryId=f89bb1cd4e3f2eb1014e424954a90025&hover=f89bb1cd4e3f2eb1014e424954a90025&styleType=styleOne'>泳衣</a></li>
+				
+				 
+			</ul>
+		</div>
+		<!--
+        	作者：730377349@qq.com
+        	时间：2015-07-20
+        	描述：
+    
+		<div class="goodsguang right">
+			<a title="软件订购" href="http://www.tleshop.com/front/classification.jsp" target="_blank">软件订购</a>
+		</div>
+		    -->
+	</div>
+</div>
+<script type="text/javascript">
+	inputTip($("#keywordsValue"), "查询:商品名称,商家名称");
+	if ("" == $("#keywords").val()) {
+		$("#keywordsValue").val("查询:商品名称,商家名称");
+	} else {
+		$("#keywordsValue").val($("#keywords").val());
+	};
+	$("#searchGood").live(
+			'click',
+			function() {
+				var keywords = $("#keywordsValue").val();
+				window.location.href = $('#basePath').val()
+				+ "front/classification.jsp?keywordsend=" + keywords;
+			});
+	/* 实现字幕无缝滚动  */
+	/*         var speed=80;
+	 var demo =document.getElementById("scrollingBox");
+	 var demo1 =document.getElementById("scrolling1");
+	 var demo2 =document.getElementById("scrolling2");
+	 demo2.innerHTML=demo1.innerHTML;   //克隆demo1为demo2
+	 function Marquee(){
+	 if(demo2.offsetTop-demo.scrollTop<=0){   //当滚动至demo1与demo2交界时
+	 demo.scrollTop-=demo1.offsetHeight; //demo跳到最顶端
+	 }
+	 else{
+	 demo.scrollTop++;
+	 }
+	 }
+	 var MyMar=setInterval(Marquee,speed);   //设置定时器
+	 demo.onmouseover=function(){clearInterval(MyMar);};//鼠标移上时清除定时器达到滚动停止的目的
+	 demo.onmouseout=function(){MyMar=setInterval(Marquee,speed);};//鼠标移开时重设定时器   */
+
+</script>
+	<!--LOGO页头行   结束 -->
+	<!--轮播   开始 -->
+	<div class="banner" id="banner" style="position: relative">
+		<!--
+        	作者：730377349@qq.com
+        	时间：2015-08-06
+        	描述：
+        
+		
+		<div class="list-box"> 
+			<ul>
+				<li><a href="#"><span class="li-txt">文胸</span><span class="li-img"><img src="img/jiantou.png"></span></a></li>
+				<li><a href="#"><span class="li-txt">内裤</span><span class="li-img"><img src="img/jiantou.png"></span></a></li>
+				<li><a href="#"><span class="li-txt">家居服</span><span class="li-img"><img src="img/jiantou.png"></span></a></li>
+				<li><a href="#"><span class="li-txt">泳装</span><span class="li-img"><img src="img/jiantou.png"></span></a></li>
+				<li><a href="#"><span class="li-txt">文胸</span><span class="li-img"><img src="img/jiantou.png"></span></a></li>
+				<li><a href="#"><span class="li-txt">内裤</span><span class="li-img"><img src="img/jiantou.png"></span></a></li>
+				<li><a href="#"><span class="li-txt">家居服</span><span class="li-img"><img src="img/jiantou.png"></span></a></li>
+				<li><a href="#"><span class="li-txt">泳装</span><span class="li-img"><img src="img/jiantou.png"></span></a></li>
+				<li><a href="#"><span class="li-txt">文胸</span><span class="li-img"><img src="img/jiantou.png"></span></a></li>
+				<li><a href="#"><span class="li-txt">内裤</span><span class="li-img"><img src="img/jiantou.png"></span></a></li>
+				<li><a href="#"><span class="li-txt">家居服</span><span class="li-img"><img src="img/jiantou.png"></span></a></li>
+				<li><a href="#"><span class="li-txt">泳装</span><span class="li-img"><img src="img/jiantou.png"></span></a></li>
+				<li><a href="#"><span class="li-txt">文胸</span><span class="li-img"><img src="img/jiantou.png"></span></a></li>
+				<li><a href="#"><span class="li-txt">内裤</span><span class="li-img"><img src="img/jiantou.png"></span></a></li>
+				<li><a href="#"><span class="li-txt">家居服</span><span class="li-img"><img src="img/jiantou.png"></span></a></li>
+				<li><a href="#"><span class="li-txt">泳装</span><span class="li-img"><img src="img/jiantou.png"></span></a></li>
+				<li><a href="#"><span class="li-txt">文胸</span><span class="li-img"><img src="img/jiantou.png"></span></a></li>
+				<li><a href="#"><span class="li-txt">内裤</span><span class="li-img"><img src="img/jiantou.png"></span></a></li>
+				
+			</ul>
+		</div>	 
+		
+		 		-->
+		 		<a href="http://www.91xfr.com/styleOneIndex.action" target="_blank" class="d1" style="background:url(http://www.91xfr.com:80//uploadFile/advertisement/851c9a23-fbfe-43dc-ab29-f840b86d0c11.jpg) center no-repeat;">
+		 		</a>
+			
+		 		<a href="http://www.91xfr.com/styleOneIndex.action " target="_blank" class="d1" style="background:url(http://www.91xfr.com:80//uploadFile/advertisement/49d4c04b-725f-4df9-9c33-e53928ffbd57.jpg) center no-repeat;">
+		 		</a>
+			
+		 		<a href="http://www.91xfr.com/styleOneIndex.action" target="_blank" class="d1" style="background:url(http://www.91xfr.com:80//uploadFile/advertisement/cf81b3a4-8b83-43f5-8b3c-fdc764cee4a6.jpg) center no-repeat;">
+		 		</a>
+			
+		 		<a href="http://www.91xfr.com/styleOneIndex.action" target="_blank" class="d1" style="background:url(http://www.91xfr.com:80//uploadFile/advertisement/50540444-099a-47f0-8575-4ad9c75561bc.jpg) center no-repeat;">
+		 		</a>
+			
+		 
+		<div class="d2" id="banner_id">
+			<ul>
+				
+					
+						<li></li>
+					
+						<li></li>
+					
+						<li></li>
+					
+						<li></li>
+					
+				
+			</ul>
+		</div>
+	
+	</div>
+
+	<script type="text/javascript">banner()</script>
+	<!--轮播 结束  -->
+	<!--功能按钮   开始-->
+	
+
+	<!--功能按钮   结束-->
+
+
+	<!--分类展示   开始-->
+	<div class="wrapper">
+		
+			<div class="area-sub left">
+				<!--
+                	作者：730377349@qq.com
+                	时间：2015-07-20
+                	描述：
+               
+				<div class="hot-menu left">
+					<div class="floor left yaHei">
+						1
+						F
+					</div>
+					<span class="title-menu yaHei current"><strong>文胸 </strong></span> <i class="english">XFR</i>
+					<div class="tab-hd right">
+						<span class="tab-hd-con"> <a
+							href="http://www.91xfr.com:80//front/classification.jsp?categoryId=f89bb1cd4e3f2eb1014e42467f1e0020"
+							target="_blank">更多产品</a>
+						</span>
+					</div>
+				</div>
+				 -->
+				<div class="hot-box left">
+					<div class="hot-tag left">
+						<!-- 一楼左侧广告位 -->
+						<div class="left left-pho">
+							<div class="left-clo">
+								<span class="lou">1F</span>
+									<img class="left-clo-img1" src="img/line.png">
+									<img class="left-clo-img2" src="img/clo1.png">
+									<span class="tx">文胸</span>
+								</div>
+							
+								
+							
+							
+							<img src="img/left2.png">
+							<a href="#"><img style="width: 190px;" src="img/in1.png"></a>
+							<img src="img/left3.png">
+							<img src="img/left4.png">
+							<!--
+                            	作者：730377349@qq.com
+                            	时间：2015-07-20
+                            	描述：
+                       
+							
+								<a href="http://www.91xfr.com/fron" target="_blank"><img width="242"
+									height="787" src="http://www.91xfr.com:80//uploadFile/goods/6f723616-4e02-424b-9ee8-bf2dcfd9b3f8.jpg"
+									alt="" title="文胸"></a>
+							     -->
+
+						</div>
+					</div>
+					<div class="tab-bd dom-display">
+						<div style="display: block;" class="tab-bd-con">
+							<div class="mod-goods-wrap">
+								<ul class="mod-goods-list currstage-list">
+									
+                                          
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4d74b3970107" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+												
+													<img title="小妇人甜蜜岁月LW3185玲珑小胸聚拢中厚按摩水袋杯文胸" alt="小妇人甜蜜岁月LW3185玲珑小胸聚拢中厚按摩水袋杯文胸" style="max-height: 180px; max-width: 180px; width: unset;" src="http://www.91xfr.com:80//uploadFile/goods/66466d78-8085-412d-aece-4dccbb17652f.jpg" onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4d74b3970107" target="_blank">
+													<span class="price">
+														 
+														
+															¥253.44
+														
+													 
+													 </span>
+													<span class="name">
+													 	小妇人甜蜜岁月LW3185玲珑小胸聚拢中厚按摩水袋杯文胸 
+													 </span> 
+													 
+												</a>
+											</div></li>
+                                        
+									
+                                          
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4d7b2023010d" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+												
+													<img title="小妇人甜蜜岁月LW3186玲珑小胸聚拢按摩水袋3/4杯文胸" alt="小妇人甜蜜岁月LW3186玲珑小胸聚拢按摩水袋3/4杯文胸" style="max-height: 180px; max-width: 180px; width: unset;" src="http://www.91xfr.com:80//uploadFile/goods/b41d7afd-0fee-48d3-bccc-f1c7e5d62454.jpg" onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4d7b2023010d" target="_blank">
+													 <span class="price">
+														 
+														
+															¥253.44
+														
+													 
+													 </span>
+													 <span class="name">
+													 	小妇人甜蜜岁月LW3186玲珑小胸聚拢按摩水袋3/4杯文胸 
+													 </span> 
+													 
+												</a>
+											</div></li>
+                                        
+									
+                                          
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4d830f7b0117" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+												
+													<img title="小妇人甜蜜岁月LW3187玲珑小胸聚拢按摩水袋3/4杯文胸" alt="小妇人甜蜜岁月LW3187玲珑小胸聚拢按摩水袋3/4杯文胸" style="max-height: 180px; max-width: 180px; width: unset;" src="http://www.91xfr.com:80//uploadFile/goods/859cecb0-edbb-4655-a97e-6a2f4ac2ec07.jpg" onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4d830f7b0117" target="_blank">
+													<span class="price">
+														 
+														
+															¥253.44
+														
+													 
+													 </span>
+													<span class="name">
+													 	小妇人甜蜜岁月LW3187玲珑小胸聚拢按摩水袋3/4杯文胸 
+													 </span> 
+													 
+												</a>
+											</div></li>
+                                        
+									
+                                          
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4d79899d010a" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+												
+													<img title="小妇人沉鱼落雁LW3311大胸大码夹棉缝制杯薄杯全罩杯调整" alt="小妇人沉鱼落雁LW3311大胸大码夹棉缝制杯薄杯全罩杯调整" style="max-height: 180px; max-width: 180px; width: unset;" src="http://www.91xfr.com:80//uploadFile/goods/624fa2a0-7401-4184-98af-8019e5c8ac9d.jpg" onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4d79899d010a" target="_blank">
+													 <span class="price">
+														 
+														
+															¥227.04
+														
+													 
+													 </span>
+													 
+													 <span class="name">
+													 	小妇人沉鱼落雁LW3311大胸大码夹棉缝制杯薄杯全罩杯调整 
+													 </span> 
+													 
+												</a>
+											</div></li>
+                                        
+									
+                                          
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4caec09200b8" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+												
+													<img title="小妇人沉鱼落雁LW3309丰满胸型立体模压杯3/4杯可插片" alt="小妇人沉鱼落雁LW3309丰满胸型立体模压杯3/4杯可插片" style="max-height: 180px; max-width: 180px; width: unset;" src="http://www.91xfr.com:80//uploadFile/goods/c931779e-6894-44af-9acc-183a6628b973.jpg" onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4caec09200b8" target="_blank">
+													<span class="price">
+														 
+														
+															¥209.44
+														
+													 
+													 </span>
+													
+													
+													<span class="name">
+													 	小妇人沉鱼落雁LW3309丰满胸型立体模压杯3/4杯可插片 
+													 </span> 
+													 
+												</a>
+											</div></li>
+                                        
+									
+                                          
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4e1d8f1d014d" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+												
+													<img title="小妇人叶鸾如画系列LW3229 3/4中厚杯刺绣古典插片文胸" alt="小妇人叶鸾如画系列LW3229 3/4中厚杯刺绣古典插片文胸" style="max-height: 180px; max-width: 180px; width: unset;" src="http://www.91xfr.com:80//uploadFile/goods/4d7d437a-8de9-4bc1-a767-7485210f5a14.jpg" onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4e1d8f1d014d" target="_blank">
+													 <span class="price">
+														 
+														
+															¥209.44
+														
+													 
+													 </span>
+													 
+													 
+													 <span class="name">
+													 	小妇人叶鸾如画系列LW3229 3/4中厚杯刺绣古典插片文胸 
+													 </span> 
+													 <
+												</a>
+											</div></li>
+                                        
+									
+                                          
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e51be78bc0180" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+												
+													<img title="小妇人国色天香LW3254丰满胸型立体模压杯中厚杯3/4杯聚拢" alt="小妇人国色天香LW3254丰满胸型立体模压杯中厚杯3/4杯聚拢" style="max-height: 180px; max-width: 180px; width: unset;" src="http://www.91xfr.com:80//uploadFile/goods/28c99d6e-2dfe-4f13-ba4e-582cd5259af0.jpg" onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e51be78bc0180" target="_blank">
+													 <span class="price">
+														 
+														
+															¥209.44
+														
+													 
+													 </span>
+													 
+													 <span class="name">
+													 	小妇人国色天香LW3254丰满胸型立体模压杯中厚杯3/4杯聚拢 
+													 </span> 
+													 
+												</a>
+											</div></li>
+                                        
+									
+                                          
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e48c0256f001b" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+												
+													<img title="小妇人牡丹阁LW3065夹棉缝制侧收薄杯文胸" alt="小妇人牡丹阁LW3065夹棉缝制侧收薄杯文胸" style="max-height: 180px; max-width: 180px; width: unset;" src="http://www.91xfr.com:80//uploadFile/goods/b23e817f-a943-4706-9ec6-3812a9946ccd.jpg" onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e48c0256f001b" target="_blank">
+													 <span class="price">
+														 
+														
+															¥205.92
+														
+													 
+													 </span>
+													 
+													 
+													 <span class="name">
+													 	小妇人牡丹阁LW3065夹棉缝制侧收薄杯文胸 
+													 </span> 
+													 
+												</a>
+											</div></li>
+                                        
+									
+                                         <!--
+                                         	作者：730377349@qq.com
+                                         	时间：2015-07-21
+                                         	描述：
+                                        
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4cb0294100bc" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+												
+													<img title="小妇人盛世佳人LW3188丰满胸型聚拢中厚3/4杯文胸" alt="小妇人盛世佳人LW3188丰满胸型聚拢中厚3/4杯文胸" style="max-height: 180px; max-width: 180px; width: unset;" src="http://www.91xfr.com:80//uploadFile/goods/6419e90e-f720-4063-950a-c2282e0c20b7.jpg" onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4cb0294100bc" target="_blank">
+													 <span class="name">
+													 	小妇人盛世佳人LW3188丰满胸型聚拢中厚3/4杯文胸 
+													 </span> 
+													 <span class="price">
+														 
+														
+															¥200.64
+														
+													 
+													 </span>
+												</a>
+											</div></li>
+                                        
+									
+                                          
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4cb6ac9900c3" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+												
+													<img title="小妇人盛世佳人LW3189丰满胸型聚拢中厚立体模压杯文胸" alt="小妇人盛世佳人LW3189丰满胸型聚拢中厚立体模压杯文胸" style="max-height: 180px; max-width: 180px; width: unset;" src="http://www.91xfr.com:80//uploadFile/goods/b41d7900-de02-4423-949a-1cdd629783ac.jpg" onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4cb6ac9900c3" target="_blank">
+													 <span class="name">
+													 	小妇人盛世佳人LW3189丰满胸型聚拢中厚立体模压杯文胸 
+													 </span> 
+													 <span class="price">
+														 
+														
+															¥200.64
+														
+													 
+													 </span>
+												</a>
+											</div></li>
+                                        
+									
+                                          
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4cbd3fc500cc" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+												
+													<img title="小妇人盛世佳人LW3190丰满胸型聚拢中厚立体模压杯文胸" alt="小妇人盛世佳人LW3190丰满胸型聚拢中厚立体模压杯文胸" style="max-height: 180px; max-width: 180px; width: unset;" src="http://www.91xfr.com:80//uploadFile/goods/96f074d7-ad47-4302-9bdf-f2d03b0035f9.jpg" onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4cbd3fc500cc" target="_blank">
+													 <span class="name">
+													 	小妇人盛世佳人LW3190丰满胸型聚拢中厚立体模压杯文胸 
+													 </span> 
+													 <span class="price">
+														 
+														
+															¥200.64
+														
+													 
+													 </span>
+												</a>
+											</div></li>
+                                        
+									
+                                          
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4d7f3bd40113" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+												
+													<img title="小妇人悠蓝恋曲LW3327 3/4水袋精油中厚杯调整型文胸" alt="小妇人悠蓝恋曲LW3327 3/4水袋精油中厚杯调整型文胸" style="max-height: 180px; max-width: 180px; width: unset;" src="http://www.91xfr.com:80//uploadFile/goods/a3423941-dcd0-4b66-ad10-973ba2b389d5.jpg" onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4d7f3bd40113" target="_blank">
+													 <span class="name">
+													 	小妇人悠蓝恋曲LW3327 3/4水袋精油中厚杯调整型文胸 
+													 </span> 
+													 <span class="price">
+														 
+														
+															¥200.64
+														
+													 
+													 </span>
+												</a>
+											</div></li>
+                                        
+									 --> 
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+                                        
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="area-sub left">
+				<!--
+                	作者：730377349@qq.com
+                	时间：2015-07-20
+                	描述：
+              
+				<div class="hot-menu left">
+					<div class="floor left yaHei">
+						2
+						F
+					</div>
+					<span class="title-menu yaHei current"><strong>内裤 </strong></span> <i class="english">XFR</i>
+					<div class="tab-hd right">
+						<span class="tab-hd-con"> <a
+							href="http://www.91xfr.com:80//front/classification.jsp?categoryId=f89bb1cd4e3f2eb1014e4248121c0022"
+							target="_blank">更多产品</a>
+						</span>
+					</div>
+				</div>
+				  -->
+				<div class="hot-box left">
+					<div class="hot-tag left">
+						<!-- 一楼左侧广告位 -->
+						<div class="left left-pho">
+							
+							<div class="left-clo">
+								<span class="lou">2F</span>
+									<img class="left-clo-img1" src="img/line.png">
+									<img class="left-clo-img2" src="img/clo2.png">
+									<span class="tx">内裤</span>
+								</div>
+							<img src="img/left2.png">
+							<a href="#"><img style="width: 190px;" src="img/in2.png"></a>
+							<img src="img/left3.png">
+							<img src="img/left4.png">
+							<!--
+                            	作者：730377349@qq.com
+                            	时间：2015-07-20
+                            	描述：
+                            
+								<a href="http://www.91xfr.com/fron" target="_blank"><img width="242"
+									height="787" src="http://www.91xfr.com:80//uploadFile/goods/74698021-9589-44f7-8333-e8f2a79eb3cb.jpg"
+									alt="" title="内裤"></a>
+							-->
+
+						</div>
+					</div>
+					<div class="tab-bd dom-display">
+						<div style="display: block;" class="tab-bd-con">
+							<div class="mod-goods-wrap">
+								<ul class="mod-goods-list currstage-list">
+									
+                                          
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4d4ccdb300e8" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+												
+													<img title="小妇人苏格兰风情LW6083中腰小调调若隐若现透明潮流劲爆款内裤" alt="小妇人苏格兰风情LW6083中腰小调调若隐若现透明潮流劲爆款内裤" style="max-height: 180px; max-width: 180px; width: unset;" src="http://www.91xfr.com:80//uploadFile/goods/b38ac21d-0b8d-4023-bd62-09b4e5642461.jpg" onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4d4ccdb300e8" target="_blank">
+													
+													<span class="price">
+														 
+														
+															¥75.68
+														
+													 
+													 </span>
+													<span class="name">
+													 	小妇人苏格兰风情LW6083中腰小调调若隐若现透明潮流劲爆款内裤 
+													 </span> 
+													 
+												</a>
+											</div></li>
+                                        
+									
+                                          
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4c675be9008f" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+												
+													<img title="小妇人闪耀芳华LW6316中腰蕾丝无痕平角裤" alt="小妇人闪耀芳华LW6316中腰蕾丝无痕平角裤" style="max-height: 180px; max-width: 180px; width: unset;" src="http://www.91xfr.com:80//uploadFile/goods/3fddd686-988d-4e0f-b2cc-4cc828e8486d.jpg" onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4c675be9008f" target="_blank">
+													 <span class="price">
+														 
+														
+															¥68.64
+														
+													 
+													 </span>
+													<span class="name">
+													 	小妇人闪耀芳华LW6316中腰蕾丝无痕平角裤 
+													 </span> 
+													
+												</a>
+											</div></li>
+                                        
+									
+                                          
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4c61a27d0088" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+												
+													<img title="小妇人闪耀芳华LW6315中腰蕾丝无痕三角裤" alt="小妇人闪耀芳华LW6315中腰蕾丝无痕三角裤" style="max-height: 180px; max-width: 180px; width: unset;" src="http://www.91xfr.com:80//uploadFile/goods/19684980-58ac-4323-a1f8-bd3ad595bf53.jpg" onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4c61a27d0088" target="_blank">
+													<span class="price">
+														 
+														
+															¥66
+														
+													 
+													 </span>
+													
+													<span class="name">
+													 	小妇人闪耀芳华LW6315中腰蕾丝无痕三角裤 
+													 </span> 
+													 
+												</a>
+											</div></li>
+                                        
+									
+                                          
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e56a0b14f01af" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+												
+													<img title="小妇人叶鸾如画系列LW6298包臀低腰透气平角内裤" alt="小妇人叶鸾如画系列LW6298包臀低腰透气平角内裤" style="max-height: 180px; max-width: 180px; width: unset;" src="http://www.91xfr.com:80//uploadFile/goods/f2c771ba-acf3-462a-83be-b9f81ba662be.jpg" onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e56a0b14f01af" target="_blank">
+													 <span class="price">
+														 
+														
+															¥66
+														
+													 
+													 </span>
+													<span class="name">
+													 	小妇人叶鸾如画系列LW6298包臀低腰透气平角内裤 
+													 </span> 
+													
+												</a>
+											</div></li>
+                                        
+									
+                                          
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4d8aaa64011a" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+												
+													<img title="小妇人甜蜜岁月LW6108中腰蕾丝透明平角裤尊贵富态的红色劲爆全场" alt="小妇人甜蜜岁月LW6108中腰蕾丝透明平角裤尊贵富态的红色劲爆全场" style="max-height: 180px; max-width: 180px; width: unset;" src="http://www.91xfr.com:80//uploadFile/goods/34d9c76e-a26d-4c77-9ece-bd44e2b9e10e.jpg" onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4d8aaa64011a" target="_blank">
+													  <span class="price">
+														 
+														
+															¥60.72
+														
+													 
+													 </span>
+													 
+													 <span class="name">
+													 	小妇人甜蜜岁月LW6108中腰蕾丝透明平角裤尊贵富态的红色劲爆全场 
+													 </span> 
+													
+												</a>
+											</div></li>
+                                        
+									
+                                          
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e570b854f01c3" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+												
+													<img title="小妇人胭脂雪系列LW6249 性感低腰蕾丝透气三角内裤" alt="小妇人胭脂雪系列LW6249 性感低腰蕾丝透气三角内裤" style="max-height: 180px; max-width: 180px; width: unset;" src="http://www.91xfr.com:80//uploadFile/goods/1aab641c-94d8-4df6-9b99-2b5177b30420.jpg" onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e570b854f01c3" target="_blank">
+													<span class="price">
+														 
+														
+															¥60.72
+														
+													 
+													 </span>
+													
+													<span class="name">
+													 	小妇人胭脂雪系列LW6249 性感低腰蕾丝透气三角内裤 
+													 </span> 
+													 
+												</a>
+											</div></li>
+                                        
+									
+                                          
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4cc31bbc00d0" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+												
+													<img title="小妇人盛世佳人LW6109中腰蕾丝透明三角裤" alt="小妇人盛世佳人LW6109中腰蕾丝透明三角裤" style="max-height: 180px; max-width: 180px; width: unset;" src="http://www.91xfr.com:80//uploadFile/goods/f57a0ce6-3f63-45db-a78e-5ad992554701.jpg" onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4cc31bbc00d0" target="_blank">
+													 
+													  <span class="price">
+														 
+														
+															¥59.84
+														
+													 
+													 </span>
+													 
+													 <span class="name">
+													 	小妇人盛世佳人LW6109中腰蕾丝透明三角裤 
+													 </span> 
+													
+												</a>
+											</div></li>
+                                        
+									
+                                          
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e56a72fb101b3" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+												
+													<img title="小妇人叶鸾如画系列LW6299包臀低腰透气刺绣三角内裤" alt="小妇人叶鸾如画系列LW6299包臀低腰透气刺绣三角内裤" style="max-height: 180px; max-width: 180px; width: unset;" src="http://www.91xfr.com:80//uploadFile/goods/78059107-7f11-4819-9376-8bf5e374a933.jpg" onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e56a72fb101b3" target="_blank">
+													 <span class="price">
+														 
+														
+															¥59.84
+														
+													 
+													 </span>
+													
+													<span class="name">
+													 	小妇人叶鸾如画系列LW6299包臀低腰透气刺绣三角内裤 
+													 </span> 
+													
+												</a>
+											</div></li>
+                                        
+									<!--
+                                    	作者：730377349@qq.com
+                                    	时间：2015-07-21
+                                    	描述：
+                                
+                                          
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4db168d3012b" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+												
+													<img title="小妇人悠蓝恋曲LW6317低腰包臀透气平角内裤" alt="小妇人悠蓝恋曲LW6317低腰包臀透气平角内裤" style="max-height: 180px; max-width: 180px; width: unset;" src="http://www.91xfr.com:80//uploadFile/goods/f1b20bc0-9b45-4f30-bada-133c0c18dbd8.jpg" onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4db168d3012b" target="_blank">
+													<span class="price">
+														 
+														
+															¥57.2
+														
+													 
+													 </span>
+													
+													
+													<span class="name">
+													 	小妇人悠蓝恋曲LW6317低腰包臀透气平角内裤 
+													 </span> 
+													 
+												</a>
+											</div></li>
+                                        
+									
+                                          
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4e064cba0149" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+												
+													<img title="小妇人羽扇曼舞系列LW6292低腰包臀透气三角内裤" alt="小妇人羽扇曼舞系列LW6292低腰包臀透气三角内裤" style="max-height: 180px; max-width: 180px; width: unset;" src="http://www.91xfr.com:80//uploadFile/goods/166157de-cdad-4010-b42e-51d02d98241d.jpg" onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4e064cba0149" target="_blank">
+													 <span class="name">
+													 	小妇人羽扇曼舞系列LW6292低腰包臀透气三角内裤 
+													 </span> 
+													 <span class="price">
+														 
+														
+															¥57.2
+														
+													 
+													 </span>
+												</a>
+											</div></li>
+                                        
+									
+                                          
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4d6972e400f8" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+												
+													<img title="小妇人隋唐风雅LW6105小内内若隐若现中腰蕾丝三角内裤" alt="小妇人隋唐风雅LW6105小内内若隐若现中腰蕾丝三角内裤" style="max-height: 180px; max-width: 180px; width: unset;" src="http://www.91xfr.com:80//uploadFile/goods/f584bbc2-907a-4d76-9edb-27fac0592758.jpg" onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4d6972e400f8" target="_blank">
+													 <span class="name">
+													 	小妇人隋唐风雅LW6105小内内若隐若现中腰蕾丝三角内裤 
+													 </span> 
+													 <span class="price">
+														 
+														
+															¥49.28
+														
+													 
+													 </span>
+												</a>
+											</div></li>
+                                        
+									
+                                          
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4c78e745009b" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+												
+													<img title="小妇人无痕系列LW6106一片式无痕高腰包臀内裤" alt="小妇人无痕系列LW6106一片式无痕高腰包臀内裤" style="max-height: 180px; max-width: 180px; width: unset;" src="http://www.91xfr.com:80//uploadFile/goods/79d043f8-5113-40b9-b468-370702d02575.jpg" onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4c78e745009b" target="_blank">
+													 <span class="name">
+													 	小妇人无痕系列LW6106一片式无痕高腰包臀内裤 
+													 </span> 
+													 <span class="price">
+														 
+														
+															¥86.24
+														
+													 
+													 </span>
+												</a>
+											</div></li>
+                                        
+									
+                                            -->
+									
+                                        
+									
+                                        
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="area-sub left">
+				<!--
+                	作者：730377349@qq.com
+                	时间：2015-07-20
+                	描述：
+            
+				<div class="hot-menu left">
+					<div class="floor left yaHei">
+						3
+						F
+					</div>
+					<span class="title-menu yaHei current"><strong>家居服 </strong></span> <i class="english">XFR</i>
+					<div class="tab-hd right">
+						<span class="tab-hd-con"> <a
+							href="http://www.91xfr.com:80//front/classification.jsp?categoryId=f89bb1cd4e3f2eb1014e42491b4c0024"
+							target="_blank">更多产品</a>
+						</span>
+					</div>
+				</div>
+				    -->
+				<div class="hot-box left">
+					<div class="hot-tag left">
+						<!-- 一楼左侧广告位 -->
+						<div class="left left-pho">
+						<div class="left-clo">
+								<span class="lou">3F</span>
+									<img class="left-clo-img1" src="img/line.png">
+									<img class="left-clo-img2" src="img/clo3.png">
+									<span class="tx">家居服</span>
+								</div>
+							<img src="img/left2.png">
+							<a href="#"><img style="width: 190px;" src="img/in4.png"></a>
+							<img src="img/left3.png">
+							<img src="img/left4.png">
+							<!--
+                            	作者：730377349@qq.com
+                            	时间：2015-07-20
+                            	描述：
+                            
+								<a href="http://www.91xfr.com/fron" target="_blank"><img width="190"
+									height="787" src="http://www.91xfr.com:80//uploadFile/goods/67515dc7-7651-4a5f-b690-a5281255091b.jpg"
+									alt="" title="家居服"></a>
+							-->
+
+						</div>
+					</div>
+					<div class="tab-bd dom-display">
+						<div style="display: block;" class="tab-bd-con">
+							<div class="mod-goods-wrap">
+								<ul class="mod-goods-list currstage-list">
+									
+                                          
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4ca8c0ee00b2" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+												
+													<img title="小妇人闪耀芳华LW8139家居服睡衣2015最新潮流劲爆款" alt="小妇人闪耀芳华LW8139家居服睡衣2015最新潮流劲爆款" style="max-height: 180px; max-width: 180px; width: unset;" src="http://www.91xfr.com:80//uploadFile/goods/bc2b7410-0092-4bb0-8d0f-b0d34066b554.jpg" onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4ca8c0ee00b2" target="_blank">
+													 <span class="price">
+														 
+														
+															¥191.84
+														
+													 
+													 </span>
+													 
+													 <span class="name">
+													 	小妇人闪耀芳华LW8139家居服睡衣2015最新潮流劲爆款 
+													 </span> 
+													 
+												</a>
+											</div></li>
+                                        
+									
+                                          
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4dbad0380130" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+												
+													<img title="小妇人悠蓝恋曲LW8140深V低胸性感修身睡裙" alt="小妇人悠蓝恋曲LW8140深V低胸性感修身睡裙" style="max-height: 180px; max-width: 180px; width: unset;" src="http://www.91xfr.com:80//uploadFile/goods/276f5971-d87c-4e44-891f-b95a4d4dc61d.jpg" onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e489941014e4dbad0380130" target="_blank">
+													 <span class="price">
+														 
+														
+															¥288.64
+														
+													 
+													 </span>
+													
+													<span class="name">
+													 	小妇人悠蓝恋曲LW8140深V低胸性感修身睡裙 
+													 </span> 
+													
+												</a>
+											</div></li>
+                                        
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="area-sub left">
+				<!--
+                	作者：730377349@qq.com
+                	时间：2015-07-20
+                	描述：
+             
+				<div class="hot-menu left">
+					<div class="floor left yaHei">
+						4
+						F
+					</div>
+					<span class="title-menu yaHei current"><strong>泳衣 </strong></span> <i class="english">XFR</i>
+					<div class="tab-hd right">
+						<span class="tab-hd-con"> <a
+							href="http://www.91xfr.com:80//front/classification.jsp?categoryId=f89bb1cd4e3f2eb1014e424954a90025"
+							target="_blank">更多产品</a>
+						</span>
+					</div>
+				</div>
+				   -->
+				<div class="hot-box left">
+					<div class="hot-tag left">
+						<!-- 一楼左侧广告位 -->
+						<div class="left left-pho">
+							<div class="left-clo">
+								<span class="lou">4F</span>
+									<img class="left-clo-img1" src="img/line.png">
+									<img class="left-clo-img2" src="img/clo4.png">
+									<span class="tx">泳装</span>
+								</div>
+							<img src="img/left2.png">
+							<a href="#"><img style="width: 190px;" src="img/in3.png"></a>
+							<img src="img/left3.png">
+							<img src="img/left4.png">
+							<!--
+                            	作者：730377349@qq.com
+                            	时间：2015-07-20
+                            	描述：
+                           
+								<a href="http://www.91xfr.com/fron" target="_blank"><img width="242"
+									height="787" src="http://www.91xfr.com:80//uploadFile/goods/57df995a-0089-4ba6-bba2-332c5b971839.jpg"
+									alt="" title="泳衣"></a>
+							 -->
+
+						</div>
+					</div>
+					<div class="tab-bd dom-display">
+						<div style="display: block;" class="tab-bd-con">
+							<div class="mod-goods-wrap">
+								<ul class="mod-goods-list currstage-list">
+									
+                                          
+										<li class="mod-item">
+											<input type="hidden" value="2">
+											<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e718e36014e71950be00007" class="pic" target="_blank" style="width: 180px; height: 180px; margin: 5px auto 0px; vertical-align: middle; text-align: center; line-height: 200px;">
+											
+											
+												
+													<img title="微信支付测试" alt="微信支付测试" style="max-height: 180px; max-width: 180px; width: unset;" src=" " onerror="this.src='http://www.91xfr.com:80/front/img/img_error.png'" />
+												
+												
+											</a>
+											<div class="info">
+												<a href="http://www.91xfr.com:80/showOneGoods.action?id=f89bb1cd4e718e36014e71950be00007" target="_blank">
+													 <span class="price">
+														 
+														
+															¥0.01
+														
+													 
+													 </span>
+													<span class="name">
+													 	微信支付测试 
+													 </span> 
+													
+												</a>
+											</div></li>
+                                        
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+	</div>
+	<!--分类展示  结束-->
+	
+
+
+
+
+
+
+
+
+
+<div class="footer-infor left">
+<!--
+	作者：730377349@qq.com
+	时间：2015-07-21
+	描述：
+
+	<div  class="friLink">
+
+   
+    	作者：730377349@qq.com
+    	时间：2015-07-15
+    	描述：
+    <div class="corper">
+     
+     <div class="corpera"><span class="corperaTitle" ><a href="#" ><img src="http://www.91xfr.com:80/front/img/corperation.png" style="width:130px;heigth:100px;" ></a></span> </div>
+	    
+	    
+	       	
+	       		<span><a href="http://www.tleshop.com" title="广州庭燎信息科技有限公司" target="_blank" ><img src="http://www.91xfr.com:80//img/tleshop-logo.jpg" style="width:130px;heigth:40px;" ></a></span>
+	       
+	       		<span><a href="http://www.budifo.com/" title="小妇人官网" target="_blank" ><img src="http://www.91xfr.com:80//uploadFile/advertisement/b4d9dc59-360e-430a-8c3a-dd161939282e.png" style="width:130px;heigth:40px;" ></a></span>
+	       
+       
+       
+    </div>
+  </div>
+  -->
+	<div class="footer-wrapper">
+		<div class="iconwrap">
+			<div class="wrap-inner">
+			<div class="icon-box">
+			<span><img src="img/car.png"></span>
+			<div class="icon-txt"><p class="ic">急速物流</p>
+			
+			</div>
+			</div>
+			
+			<div class="icon-box">
+			<span><img src="img/zheng.png"></span>
+			 <div class="icon-txt"><p class="ic">正品保障</p>
+			
+			</div>
+			</div>
+			<div class="icon-box">
+			<span><img src="img/serve.png"></span>
+			<div class="icon-txt"><p class="ic">售后服务</p>
+			
+			</div>
+			</div>
+			<div class="clear"></div>
+			</div>
+		</div>
+         
+		<div class="guide-links clearfix">
+			<div class="wrap-inner">
+			<div class="links-wrap">
+				<div class="links-wrap-inner">
+					<div class="links-b ">
+						<a target="_blank" href="#"><h4 class="l-title">
+								自助服务
+							</h4></a>
+						<div class="l-list">
+							<ul>
+								
+									<li><a
+										href="footorArticle.action?article.id=297e4ba249eec3b50149eed1353b0004">意见反馈</a></li>
+								
+									<li><a
+										href="footorArticle.action?article.id=297e4ba249eec3b50149eed679360005">退换货申请</a></li>
+								
+									<li><a
+										href="footorArticle.action?article.id=4028138149910d51014992e609590003">忘记密码</a></li>
+								
+							</ul>
+						</div>
+					</div>
+				
+					<div class="links-b ">
+						<a target="_blank" href="#"><h4 class="l-title">
+								新手课题
+							</h4></a>
+						<div class="l-list">
+							<ul>
+								
+									<li><a
+										href="footorArticle.action?article.id=297e4ba249eec3b50149eed7bc730006">新用户注册</a></li>
+								
+							</ul>
+						</div>
+					</div>
+				
+					<div class="links-b ">
+						<a target="_blank" href="#"><h4 class="l-title">
+								账号管理
+							</h4></a>
+						<div class="l-list">
+							<ul>
+								
+									<li><a
+										href="footorArticle.action?article.id=297e4ba249eec3b50149eedb36440007">退订邮件短信</a></li>
+								
+									<li><a
+										href="footorArticle.action?article.id=297e4ba249eec3b50149eedbbc130008">个人信息说明</a></li>
+								
+									<li><a
+										href="footorArticle.action?article.id=297e4ba249eec3b50149eedc4bfc0009">绑定手机邮箱</a></li>
+								
+							</ul>
+						</div>
+					</div>
+				
+					<div class="links-b ">
+						<a target="_blank" href="#"><h4 class="l-title">
+								配送方式
+							</h4></a>
+						<div class="l-list">
+							<ul>
+								
+									<li><a
+										href="footorArticle.action?article.id=297e4ba249eec3b50149eedceab3000a">商品验货与签收</a></li>
+								
+									<li><a
+										href="footorArticle.action?article.id=297e4ba249eec3b50149eedd4afe000b">查看订单物流</a></li>
+								
+									<li><a
+										href="footorArticle.action?article.id=297e4ba249eec3b50149eeddb5c9000c">配送政策说明</a></li>
+								
+							</ul>
+						</div>
+					</div>
+				
+					<div class="links-b ">
+						<a target="_blank" href="#"><h4 class="l-title">
+								购物指南
+							</h4></a>
+						<div class="l-list">
+							<ul>
+								
+									<li><a
+										href="footorArticle.action?article.id=297e4ba249eec3b50149eede20ce000d">订单状态</a></li>
+								
+									<li><a
+										href="footorArticle.action?article.id=297e4ba249eec3b50149eede6ff2000e">购物流程</a></li>
+								
+									<li><a
+										href="footorArticle.action?article.id=8ab781604b34bddd014b34c737d90007">购物类问题</a></li>
+								
+							</ul>
+						</div>
+					</div>
+					
+					
+				
+					<div class="links-b ">
+						<a target="_blank" href="#"><h4 class="l-title">
+								关于我们
+							</h4></a>
+						<div class="l-list">
+							<ul>
+								
+									<li><a
+										href="footorArticle.action?article.id=297e4ba249eec3b50149eecc6a780002">公司简介</a></li>
+								
+									<li><a
+										href="footorArticle.action?article.id=297e4ba249eec3b50149eeccba640003">联系我们</a></li>
+								
+							</ul>
+						</div>
+					</div>
+			
+					
+					
+			<!--
+            	作者：730377349@qq.com
+            	时间：2015-07-15
+            	描述：
+       		<div class="pholis">
+						<a target="_blank" href="#"><h4 class="l-title">
+								手机官网
+							</h4></a>
+						<div class="l-list">
+							<ul>
+								
+									<li class="img-bor"><img src="img/phone.jpg" /></li>
+								
+									
+								
+									
+								
+							</ul>
+						</div>
+					</div>
+					     -->
+					     
+                       
+					<div class="l-list-l">
+						
+								
+							
+						<ul>
+								<li class="list-li">合作伙伴:</li>
+									<li><a
+										href="http://www.tleshop.com" title="广州庭燎信息科技有限公司" target="_blank">庭燎科技</a></li>
+								
+									<li><a
+										href="http://www.budifo.com/" title="小妇人官网" target="_blank">小妇人集团</a></li>
+						
+								
+									
+									
+								
+							</ul>
+					</div>
+					  
+<div class="mainFooter">
+
+2014-2020©广州市小妇人内衣有限公司　　<a href="http://gsxt.gdgs.gov.cn/aiccips/"  target="_blank" style="margin-right: 5px;"><img src="../../front/img/gongshang.png"/></a>营业执照：440111000133178　 <a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action"  target="_blank" style="margin-right: 5px;"><img src="../../front/img/gongxing.png"/></a>粤ICP备09033122号-6
+</div>
+             </div>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<a href="http://www.91xfr.com:80/shoppingCar.action" style="bottom: 60px;
+    position: fixed;right: 1px; z-index: 110;height: 80px;width: 36px;
+">
+	<img src="img/shoppingcar.png"/>
+	
+	<!--
+    	作者：730377349@qq.com
+    	时间：2015-07-21
+    	描述：
+  
+	<p class="redpot" id="js_shoppingCarCount"></p>
+	  -->
+	
+</a>
+
+	<link rel="stylesheet" type="text/css" href="http://www.91xfr.com:80/front/css/qq_online_blue.css">
+	
+	<script src="http://www.91xfr.com:80/front/js/qq_online.js"></script>
+
+	<script> 
+			$(function(){
+				getShoppingCarCount();
+		var salename = '销售热线';
+		var tels = '020-86246218   400--6377888' ;
+		/*皮肤编号 lrkf_blue1 无图版，lrkf_blue2 图片版，更多皮肤敬请期待 懒人qq客服 - http://www.51xuediannao.com/qqkefu/*/
+		$("#lrkfwarp").lrkf({
+			kftop:'300',				//距离顶部距离
+			//btntext:'客服在线',			//默认为 客服在线 四个字，如果你了解css可以使用图片代替
+			defshow:false,			//如果想默认折叠，将defshow:false,的注释打开，默认为展开
+			//position:'absolute',		//如果为absolute所有浏览器在拖动滚动条时均有动画效果，如果为空则只有IE6有动画效果，其他浏览器
+			qqs:[{'name':'范经理','qq':'1711956294'},{'name':'于经理','qq':'1310633466'},],
+			tel:[
+				{'name':salename,'tel':tels}
+			],
+		});
+			
+	});
+
+
+		var getShoppingCarCount = function(){
+			$.ajax({
+				url: 'shoppingCarCount.action',
+				type: 'post',
+				cache: false,
+				success: function(data) {
+					//ajaxEnd
+					if (data == '0') {
+						$("#js_shoppingCarCount").hide();
+					} else {
+						$("#js_shoppingCarCount").show();
+						$("#js_shoppingCarCount").text(data);
+					}
+				}
+			});
+		}
+
+	</script>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?969c0a49176609a62dd3d3efa7db66ba";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+	<!--底部结束  -->
+	<script type="text/javascript" src="http://www.91xfr.com:80/front/js/bootstrap-carousel.js"></script>
+	
+
+</body>
+</html>
