@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+
+	<body>
+		<!-- Swiper -->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="firstpage page page1 show">
+					<img src="img/firstpage.png">
+					<img src="img/marriage.png" class="top">
+					<div class="bottom">
+					</div>
+					<div class="wrap">
+						<img src="img/mar-flowr.png">
+					</div>
+				</div>
+
+				<div class="second page page2">
+					<h3>2015-05-16&nbsp;下午&nbsp;17：30</h3>
+					<h1>真诚的邀约</h1>
+					<p>在这温馨浪漫的，喜悦甜蜜的日子里，我两决定于2015-05-16(星期六)上午 17：30举行结婚典礼，届时敬备酒宴，欢迎您到来分享这份喜悦，您的光临将使我们的婚宴增添万分光彩</p>
+					<h3>地点：花溪区迎宾路210号（花溪迎宾馆酒店）</h3>
+				</div>
+
+				<div class="third page3 page ">
+					<div class="line"></div>
+					<img src="img/back.png" class="back">
+					<div class="box">
+						<h1>典藏真爱</h1>
+						<h3>Collection of precious</h3>
+						<h3>2015-05-16&nbsp;下午&nbsp;17：30</h3>
+						<img src="img/second.jpg" class="photo"></div>
+				</div>
+
+				<div class="third page4 page ">
+					<div class="line"></div>
+					<img src="img/back.png" class="back">
+					<div class="box">
+						<h1>典藏真爱</h1>
+						<h3>Collection of precious</h3>
+						<h3>2015-05-16&nbsp;下午&nbsp;17：30</h3>
+						<img src="img/first.jpg" class="photo"></div>
+				</div>
+
+				<div class="third page5 page ">
+					<div class="line"></div>
+					<img src="img/back.png" class="back">
+					<div class="box">
+						<h1>典藏真爱</h1>
+						<h3>Collection of precious</h3>
+						<h3>2015-05-16&nbsp;下午&nbsp;17：30</h3>
+						<img src="img/address.png" class="photo">
+						<h3 class="address">地点：花溪区迎宾路210号（花溪迎宾馆酒店）</h3>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<script src="js/zepto.min.js"></script>
+		<script type="text/javascript" src="js/toucher.js"></script>
+		<script>
+			var index=1;
+			            var totalpage,nextpage;
+			
+			        	$(document).swipeUp(function(){
+			    		 totalpage=$(".page").length;
+			    		 if(index==totalpage){
+			    		 	$(".page"+index).removeClass("show");
+			    		 	$(".page1").addClass("show");
+			    		 	
+			    		 	index=1;
+			    		 }else{
+			    		 	nextpage=index+1;
+			    		 	$(".page"+index).removeClass("show");
+			    		 	$(".page"+nextpage).addClass("show");
+			    		 	index=nextpage;
+			    		 }
+			    		 });
+			    		 $(document).swipeDown(function(){
+			    		 totalpage=$(".page").length;
+			    		 if(index==1){
+			    		 	$(".page"+index).removeClass("show");
+			    		 	$(".page"+totalpage).addClass("show");
+			    		 	
+			    		 	index=4;
+			    		 }else{
+			    		 	nextpage=index-1;
+			    		 	$(".page"+index).removeClass("show");
+			    		 	$(".page"+nextpage).addClass("show");
+			    		 	index=nextpage;
+			    		 }
+			    		
+			    	});
+		</script>
+	</body>
+
+</html>
